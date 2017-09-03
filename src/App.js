@@ -478,7 +478,7 @@ const App = () => (
   <Router>
     <div>
       <Links />
-      <Route exact path="/" component={Dinos} />
+      <Route exact path="/dinos" component={Dinos} />
       <Route exact path="/dino/:dinoName" render={({ match }) => (
         <SingleDino
           dino={dinoData.filter(dino => (dino.name === match.params.dinoName))[0]}
