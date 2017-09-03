@@ -1,7 +1,7 @@
 {
   "name": "dino-page",
   "version": "0.1.0",
-  "homepage": "https://myusername.github.io/my-app",
+  "homepage": "http://github.guioconnor.com/dinos/",
   "private": true,
   "dependencies": {
     "gh-pages": "^1.0.0",
