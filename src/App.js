@@ -468,7 +468,7 @@ const SingleDino = ({ dino }) => (
 
 const Links = () => (
   <nav>
-    <NavLink exact activeClassName="active" to="/">Home</NavLink>
+    <NavLink exact activeClassName="active" to="/dinos">Home</NavLink>
     <NavLink activeClassName="active" to={{ pathname: '/about' }}>About</NavLink>
     <NavLink activeClassName="active" to={{ pathname: '/contact' }}>Contact</NavLink>
   </nav>
