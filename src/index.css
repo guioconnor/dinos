@@ -90,6 +90,7 @@ h1:first-line {
 }
 
 img.main {
+  width: 94%;
   padding: 30px;
   background: #fff;
   border-radius: 10px;
