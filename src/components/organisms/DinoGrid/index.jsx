@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import DinoCard from "../DinoCard";
 
 const DinoGrid = ({ dinoData, mainIllustration }) => (
   <div className="App">
@@ -8,11 +9,7 @@ const DinoGrid = ({ dinoData, mainIllustration }) => (
     </h1>
     <img className="main" src={mainIllustration} alt="dinosaurs" />
     <div className="container">
-      {dinoData.map(dino => (
-        <NavLink to={`/dino/${dino.name}`} className="dino">
-          <img src={dino.image} alt={dino.name} />
-        </NavLink>
-      ))}
+      {dinoData.map(dino => <DinoCard dino={dino} />)}
     </div>
   </div>
 );
