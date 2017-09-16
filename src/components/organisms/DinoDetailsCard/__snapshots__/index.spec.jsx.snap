@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DinoDetailsCard /> With an empty data set should render an empty grid 1`] = `
+<div
+  className="App"
+>
+  <h1>
+    Thomas and Marco's 
+    <br />
+     
+    name
+     page
+  </h1>
+  <img
+    alt="dinosaurs"
+    className="main"
+    src="image"
+  />
+  <ul
+    className="dino-data"
+  >
+    <li>
+      name: 
+      name
+    </li>
+    <li>
+      pronunciation: 
+      pronunciation
+    </li>
+    <li>
+      meaningOfName: 
+      meaningOfName
+    </li>
+    <li>
+      diet: 
+      diet
+    </li>
+    <li>
+      length: 
+      length
+    </li>
+    <li>
+      period: 
+      period
+    </li>
+    <li>
+      mya: 
+      mya
+    </li>
+    <li>
+      info: 
+      info
+    </li>
+  </ul>
+</div>
+`;

@@ -19,14 +19,14 @@ const DinoDetailsCard = ({
     </h1>
     <img className="main" src={image} alt="dinosaurs" />
     <ul className="dino-data">
-      {name && <li>name{name}</li>}
-      {pronunciation && <li>pronunciation{pronunciation}</li>}
-      {meaningOfName && <li>meaningOfName{meaningOfName}</li>}
-      {diet && <li>diet{diet}</li>}
-      {length && <li>length{length}</li>}
-      {period && <li>period{period}</li>}
-      {mya && <li>mya{mya}</li>}
-      {info && <li>info{info}</li>}
+      {name && <li>name: {name}</li>}
+      {pronunciation && <li>pronunciation: {pronunciation}</li>}
+      {meaningOfName && <li>meaningOfName: {meaningOfName}</li>}
+      {diet && <li>diet: {diet}</li>}
+      {length && <li>length: {length}</li>}
+      {period && <li>period: {period}</li>}
+      {mya && <li>mya: {mya}</li>}
+      {info && <li>info: {info}</li>}
     </ul>
   </div>
 );

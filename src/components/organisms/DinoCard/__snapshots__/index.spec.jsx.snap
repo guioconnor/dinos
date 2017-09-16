@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DinoCard /> should render correctly 1`] = `
+<NavLink
+  activeClassName="active"
+  ariaCurrent="true"
+  className="dino"
+  to="/dino/Dino name"
+>
+  <img
+    alt="Dino name"
+    src="abelisaurus"
+  />
+</NavLink>
+`;

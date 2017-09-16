@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DinoGrid /> With a non-empty data set should render a grid with dino cards 1`] = `
+<div
+  className="App"
+>
+  <h1>
+    Thomas and Marco's 
+    <br />
+     dinosaur page
+  </h1>
+  <img
+    alt="dinosaurs"
+    className="main"
+  />
+  <div
+    className="container"
+  >
+    <DinoCard
+      dino={
+        Object {
+          "diet": "carnivorous",
+          "image": "Silhouettes.allosaurus",
+          "info": "Allosaurus was an apex predator in the Late Jurassic in North America.",
+          "length": "12m",
+          "meaningOfName": "other lizard",
+          "mya": "156-144",
+          "name": "Allosaurus",
+          "period": "Late Jurassic",
+          "pronunciation": "AL-oh-sore-us",
+        }
+      }
+    />
+    <DinoCard
+      dino={
+        Object {
+          "diet": "herbivorous",
+          "info": "Named the 'deceptive lizard' because its skull was confused with those of other sauropods until 1909.",
+          "length": "21m",
+          "meaningOfName": "deceptive lizard",
+          "mya": "154-145",
+          "name": "Apatosaurus",
+          "period": "Late Jurassic",
+          "pronunciation": "ah-PAT-oh-sore-us",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`<DinoGrid /> With an empty data set should render an empty grid 1`] = `
+<div
+  className="App"
+>
+  <h1>
+    Thomas and Marco's 
+    <br />
+     dinosaur page
+  </h1>
+  <img
+    alt="dinosaurs"
+    className="main"
+  />
+  <div
+    className="container"
+  />
+</div>
+`;

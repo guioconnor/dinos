@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navigation /> should render correctly 1`] = `
+<nav>
+  <NavLink
+    activeClassName="active"
+    ariaCurrent="true"
+    exact={true}
+    to="/dinos"
+  >
+    Home
+  </NavLink>
+  <NavLink
+    activeClassName="active"
+    ariaCurrent="true"
+    to={
+      Object {
+        "pathname": "/about",
+      }
+    }
+  >
+    About
+  </NavLink>
+  <NavLink
+    activeClassName="active"
+    ariaCurrent="true"
+    to={
+      Object {
+        "pathname": "/contact",
+      }
+    }
+  >
+    Contact
+  </NavLink>
+</nav>
+`;
