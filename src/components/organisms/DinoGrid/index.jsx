@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import DinoCard from "../DinoCard";
 
 const DinoGrid = ({ dinoData, mainIllustration }) => (

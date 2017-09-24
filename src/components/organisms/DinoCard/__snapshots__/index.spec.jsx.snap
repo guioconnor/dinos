@@ -11,5 +11,8 @@ exports[`<DinoCard /> should render correctly 1`] = `
     alt="Dino name"
     src="abelisaurus"
   />
+  <h2>
+    Dino name
+  </h2>
 </NavLink>
 `;
