@@ -29,7 +29,7 @@ const dinoData = [
     image: Silhouettes.brachiosaurus,
     name: "Brachiosaurus",
     pronunciation: "BRAK-ee-oh-sore-us",
-    meaningOfName: "arm lizard",
+    meaningOfName: "Arm lizard",
     diet: "herbivorous",
     length: "30m",
     period: "Late Jurassic",
@@ -207,7 +207,7 @@ const dinoData = [
     // "image": xenoceratops,
     name: "Xenoceratops",
     pronunciation: "ZEE-no-SEH-ruh-tops",
-    meaningOfName: "alien horned face",
+    meaningOfName: "Alien horned face",
     diet: "herbivorous",
     length: "6m",
     period: "Early Cretaceous",
@@ -229,175 +229,175 @@ const dinoData = [
   },
   {
     image: Silhouettes.abelisaurus,
-    name: "abelisaurus"
+    name: "Abelisaurus"
   },
   {
     image: Silhouettes.camarosaurus,
-    name: "camarosaurus"
+    name: "Camarosaurus"
   },
   {
     image: Silhouettes.claosaurus,
-    name: "claosaurus"
+    name: "Claosaurus"
   },
   {
     image: Silhouettes.eromangasaurus,
-    name: "eromangasaurus"
+    name: "Eromangasaurus"
   },
   {
     image: Silhouettes.mamenchisaurus,
-    name: "mamenchisaurus"
+    name: "Mamenchisaurus"
   },
   {
     image: Silhouettes.spinosaurus,
-    name: "spinosaurus"
+    name: "Spinosaurus"
   },
   {
     image: Silhouettes.aerosteon,
-    name: "aerosteon"
+    name: "Aerosteon"
   },
   {
     image: Silhouettes.camptosaurus,
-    name: "camptosaurus"
+    name: "Camptosaurus"
   },
   {
     image: Silhouettes.daspletosaurus,
-    name: "daspletosaurus"
+    name: "Daspletosaurus"
   },
   {
     image: Silhouettes.gigantoraptor,
-    name: "gigantoraptor"
+    name: "Gigantoraptor"
   },
   {
     image: Silhouettes.mapusaurus,
-    name: "mapusaurus"
+    name: "Mapusaurus"
   },
   {
     image: Silhouettes.tyrannosaurusRex,
-    name: "tyrannosaurusRex"
+    name: "TyrannosaurusRex"
   },
   {
     image: Silhouettes.albertosaurus,
-    name: "albertosaurus"
+    name: "Albertosaurus"
   },
   {
     image: Silhouettes.carcharodontosaurus,
-    name: "carcharodontosaurus"
+    name: "Carcharodontosaurus"
   },
   {
     image: Silhouettes.deinonychus,
-    name: "deinonychus"
+    name: "Deinonychus"
   },
   {
     image: Silhouettes.giraffatitan,
-    name: "giraffatitan"
+    name: "Giraffatitan"
   },
   {
     image: Silhouettes.massospondylus,
-    name: "massospondylus"
+    name: "Massospondylus"
   },
   {
     image: Silhouettes.allosaurus,
-    name: "allosaurus"
+    name: "Allosaurus"
   },
   {
     image: Silhouettes.caudipteryx,
-    name: "caudipteryx"
+    name: "Caudipteryx"
   },
   {
     image: Silhouettes.dilong,
-    name: "dilong"
+    name: "Dilong"
   },
   {
     image: Silhouettes.iguanodon,
-    name: "iguanodon"
+    name: "Iguanodon"
   },
   {
     image: Silhouettes.megalosaurus,
-    name: "megalosaurus"
+    name: "Megalosaurus"
   },
   {
     image: Silhouettes.velociraptor,
-    name: "velociraptor"
+    name: "Velociraptor"
   },
   {
     image: Silhouettes.archaeopteryx,
-    name: "archaeopteryx"
+    name: "Archaeopteryx"
   },
   {
     image: Silhouettes.centrosaurus,
-    name: "centrosaurus"
+    name: "Centrosaurus"
   },
   {
     image: Silhouettes.diplodocus,
-    name: "diplodocus"
+    name: "Diplodocus"
   },
   {
     image: Silhouettes.irritator,
-    name: "irritator"
+    name: "Irritator"
   },
   {
     image: Silhouettes.microraptor,
-    name: "microraptor"
+    name: "Microraptor"
   },
   {
     image: Silhouettes.argentinosaurus,
-    name: "argentinosaurus"
+    name: "Argentinosaurus"
   },
   {
     image: Silhouettes.cetiosaurus,
-    name: "cetiosaurus"
+    name: "Cetiosaurus"
   },
   {
     image: Silhouettes.edmontosaurus,
-    name: "edmontosaurus"
+    name: "Edmontosaurus"
   },
   {
     image: Silhouettes.leyesaurus,
-    name: "leyesaurus"
+    name: "Leyesaurus"
   },
   {
     image: Silhouettes.monoclonius,
-    name: "monoclonius"
+    name: "Monoclonius"
   },
   {
     image: Silhouettes.baryonyx,
-    name: "baryonyx"
+    name: "Baryonyx"
   },
   {
     image: Silhouettes.chasmosaurus,
-    name: "chasmosaurus"
+    name: "Chasmosaurus"
   },
   {
     image: Silhouettes.elasmosaurus,
-    name: "elasmosaurus"
+    name: "Elasmosaurus"
   },
   {
     image: Silhouettes.magyarosaurus,
-    name: "magyarosaurus"
+    name: "Magyarosaurus"
   },
   {
     image: Silhouettes.plateosaurus,
-    name: "plateosaurus"
+    name: "Plateosaurus"
   },
   {
     image: Silhouettes.brachiosaurus,
-    name: "brachiosaurus"
+    name: "Brachiosaurus"
   },
   {
     image: Silhouettes.citipati,
-    name: "citipati"
+    name: "Citipati"
   },
   {
     image: Silhouettes.epidexipteryx,
-    name: "epidexipteryx"
+    name: "Epidexipteryx"
   },
   {
     image: Silhouettes.majungasaurus,
-    name: "majungasaurus"
+    name: "Majungasaurus"
   },
   {
     image: Silhouettes.pterodactyl,
-    name: "pterodactyl"
+    name: "Pterodactyl"
   }
 ];
 
