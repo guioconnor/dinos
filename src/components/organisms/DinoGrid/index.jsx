@@ -8,7 +8,7 @@ const DinoGrid = ({ dinoData, mainIllustration }) => (
       Thomas and Marco's <br /> dinosaur page
     </h1>
     <img className="main" src={mainIllustration} alt="dinosaurs" />
-    <DietFilter setFilter={f => console.log(f)} />
+    <DietFilter />
     <div className="container">
       {dinoData.map(dino => <DinoCard dino={dino} />)}
     </div>

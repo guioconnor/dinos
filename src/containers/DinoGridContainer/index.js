@@ -1,11 +1,14 @@
 import { connect } from "react-redux";
-import { getdinosAlphabeticallySorted } from "../../redux/selectors.js";
+import {
+  getdinosAlphabeticallySorted,
+  getDinosFilteredByDiet
+} from "../../redux/selectors.js";
 import DinoGrid from "../../components/organisms/DinoGrid";
 import mainIllustration from "../../img/main-illustration.jpg";
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = state => {
   return {
-    dinoData: getdinosAlphabeticallySorted(state),
+    dinoData: getDinosFilteredByDiet(state.dinos)(state.diet),
     mainIllustration: mainIllustration
   };
 };

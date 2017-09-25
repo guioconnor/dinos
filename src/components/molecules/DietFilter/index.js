@@ -1,28 +1,41 @@
 import React from "react";
+import { connect } from "react-redux";
+import { setDietFilter } from "../../../redux";
+import FilterButton from "../../atoms/FilterButton";
 
 const DietFilter = ({ setFilter }) => (
   <ul>
     <li>
-      <button type="button" onClick={() => setFilter()}>
+      <FilterButton onClick={setFilter} value={null}>
         All
-      </button>
+      </FilterButton>
     </li>
     <li>
-      <button type="button" onClick={() => setFilter("Carnivores")}>
+      <FilterButton onClick={setFilter} value="carnivore">
         Carnivores
-      </button>
+      </FilterButton>
     </li>
     <li>
-      <button type="button" onClick={() => setFilter("Herbivores")}>
+      <FilterButton onClick={setFilter} value="herbivore">
         Herbivores
-      </button>
+      </FilterButton>
     </li>
     <li>
-      <button type="button" onClick={() => setFilter("Omnivores")}>
+      <FilterButton onClick={setFilter} value="omnivore">
         Omnivores
-      </button>
+      </FilterButton>
     </li>
   </ul>
 );
 
-export default DietFilter;
+const mapStateToProps = state => {
+  return {};
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    setFilter: filter => dispatch(setDietFilter(filter))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(DietFilter);
