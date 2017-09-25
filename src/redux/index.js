@@ -1,25 +1,31 @@
-const SET_DIET_FILTER = "SET_DIET_FILTER";
+const SET_FILTER = "SET_DIET_FILTER";
 
 const initialState = {
   dinos: [],
-  diet: undefined
+  filters: {
+    diet: undefined,
+    period: undefined
+  }
 };
 
 // actions
-export const setDietFilter = diet => {
+export const setFilter = (property, filter) => {
   return {
-    type: SET_DIET_FILTER,
-    diet: diet
+    type: SET_FILTER,
+    property: property,
+    filter: filter
   };
 };
 
 const reducer = (state = initialState, action) => {
-  console.log(action);
   switch (action.type) {
-    case SET_DIET_FILTER:
+    case SET_FILTER:
       return {
         ...state,
-        diet: action.diet
+        filters: {
+          ...state.filters,
+          [action.property]: action.filter
+        }
       };
     default:
       return state;

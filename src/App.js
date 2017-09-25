@@ -12,7 +12,28 @@ import Navigation from "./components/organisms/Navigation";
 
 import "./App.css";
 
-const store = createStore(rootReducer, { dinos: dinoData });
+const addLoggingToDispatch = store => {
+  const next = store.dispatch;
+  if (!console.group) {
+    return next;
+  }
+
+  return action => {
+    console.group(action.type);
+    console.log("%c prev state", "color: gray", store.getState());
+    console.log("%c action", "color: blue", action);
+
+    const returnValue = next(action);
+
+    console.log("%c next state", "color: green", store.getState());
+    console.groupEnd(action.type);
+    return returnValue;
+  };
+};
+
+const store = createStore(rootReducer, { dinos: dinoData, filters: {} });
+
+store.dispatch = addLoggingToDispatch(store);
 
 const App = () => (
   <Provider store={store}>

@@ -1,6 +1,7 @@
 import React from "react";
 import DinoCard from "../DinoCard";
 import DietFilter from "../../molecules/DietFilter";
+import PeriodFilter from "../../molecules/PeriodFilter";
 
 const DinoGrid = ({ dinoData, mainIllustration }) => (
   <div className="App">
@@ -9,6 +10,7 @@ const DinoGrid = ({ dinoData, mainIllustration }) => (
     </h1>
     <img className="main" src={mainIllustration} alt="dinosaurs" />
     <DietFilter />
+    <PeriodFilter />
     <div className="container">
       {dinoData.map(dino => <DinoCard dino={dino} />)}
     </div>

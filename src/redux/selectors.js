@@ -1,19 +1,19 @@
-const getDinosFilteredBy = state => filter => {
-  if (!filter) {
-    return state;
-  }
-  return state.filter(d => d[filter.key] === filter.value);
-};
-
-const getdinosAlphabeticallySorted = dinos => {
+const getDinosAlphabeticallySorted = dinos => {
   return dinos.sort(
     (d1, d2) => (d1.name.toLowerCase() > d2.name.toLowerCase() ? 1 : -1)
   );
 };
 
-const getDinosFilteredByDiet = state => diet => {
-  const filtereDinos = diet ? state.filter(d => d.diet === diet) : state;
-  return getdinosAlphabeticallySorted(filtereDinos);
+const getFilteredDinos = dinos => filters => {
+  if (Object.keys(filters).length === 0) {
+    return dinos;
+  }
+  return Object.keys(filters).reduce((dinos, filterName) => {
+    if (!filters[filterName]) {
+      return dinos;
+    }
+    return dinos.filter(d => d[filterName] === filters[filterName]);
+  }, getDinosAlphabeticallySorted(dinos));
 };
 
-export { getdinosAlphabeticallySorted, getDinosFilteredByDiet };
+export { getDinosAlphabeticallySorted, getFilteredDinos };

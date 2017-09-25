@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { setDietFilter } from "../../../redux";
+import { setFilter } from "../../../redux";
 import FilterButton from "../../atoms/FilterButton";
 
 const DietFilter = ({ setFilter }) => (
@@ -34,7 +34,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    setFilter: filter => dispatch(setDietFilter(filter))
+    setFilter: filter => dispatch(setFilter("diet", filter))
   };
 };
 
