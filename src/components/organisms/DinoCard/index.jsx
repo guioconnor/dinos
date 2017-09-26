@@ -10,6 +10,14 @@ const CardLink = styled(NavLink)`
   margin: 1%;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 
+  @media (min-width: 800px) {
+    width: 16%;
+  }
+
+  @media (min-width: 1000px) {
+    width: 12%;
+  }
+
   &:hover {
     background: #eee;
   }
