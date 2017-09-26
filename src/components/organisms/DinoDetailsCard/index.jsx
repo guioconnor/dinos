@@ -1,4 +1,18 @@
 import React from "react";
+import styled from "styled-components";
+
+const InfoList = styled.ul`
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+`;
+
+const InfoItem = styled.li`
+  padding: 5px 20px;
+  margin: 2px 0;
+  background: #bbe;
+`;
 
 const DinoDetailsCard = ({
   dino: {
@@ -18,16 +32,16 @@ const DinoDetailsCard = ({
       Thomas and Marco's <br /> {name} page
     </h1>
     <img className="main" src={image} alt="dinosaurs" />
-    <ul className="dino-data">
-      {name && <li>name: {name}</li>}
-      {pronunciation && <li>pronunciation: {pronunciation}</li>}
-      {meaningOfName && <li>meaningOfName: {meaningOfName}</li>}
-      {diet && <li>diet: {diet}</li>}
-      {length && <li>length: {length}</li>}
-      {period && <li>period: {period}</li>}
-      {mya && <li>mya: {mya}</li>}
-      {info && <li>info: {info}</li>}
-    </ul>
+    <InfoList>
+      {name && <InfoItem>name: {name}</InfoItem>}
+      {pronunciation && <InfoItem>pronunciation: {pronunciation}</InfoItem>}
+      {meaningOfName && <InfoItem>meaningOfName: {meaningOfName}</InfoItem>}
+      {diet && <InfoItem>diet: {diet}</InfoItem>}
+      {length && <InfoItem>length: {length}</InfoItem>}
+      {period && <InfoItem>period: {period}</InfoItem>}
+      {mya && <InfoItem>mya: {mya}</InfoItem>}
+      {info && <InfoItem>info: {info}</InfoItem>}
+    </InfoList>
   </div>
 );
 

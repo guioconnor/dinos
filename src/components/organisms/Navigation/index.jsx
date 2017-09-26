@@ -1,8 +1,24 @@
 import React from "react";
+import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
+const Nav = styled.nav`
+  & a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 3px;
+    text-decoration: none;
+  }
+
+  & a.active,
+  & a:hover {
+    background: #bbe;
+  }
+`;
+
 const Navigation = () => (
-  <nav>
+  <Nav>
     <NavLink exact activeClassName="active" to="/dinos">
       Home
     </NavLink>
@@ -12,7 +28,7 @@ const Navigation = () => (
     <NavLink activeClassName="active" to={{ pathname: "/contact" }}>
       Contact
     </NavLink>
-  </nav>
+  </Nav>
 );
 
 export default Navigation;
