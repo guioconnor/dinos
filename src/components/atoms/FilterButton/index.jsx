@@ -1,9 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+
+const Button = styled.button`
+  background: #bbe;
+  border-radius: 3px;
+  border: none;
+`;
 
 const FilterButton = ({ onClick, value, children }) => (
-  <button type="button" onClick={() => onClick(value)}>
+  <Button type="button" onClick={() => onClick(value)}>
     {children}
-  </button>
+  </Button>
 );
 
 export default FilterButton;

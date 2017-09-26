@@ -5,7 +5,9 @@ import toJson from "enzyme-to-json";
 
 const data = {
   name: "Dino name",
-  image: "abelisaurus"
+  image: "abelisaurus",
+  diet: "carnivore",
+  period: "Late Jurassic"
 };
 
 describe("<DinoCard />", () => {

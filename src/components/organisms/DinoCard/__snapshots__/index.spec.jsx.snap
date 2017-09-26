@@ -14,5 +14,11 @@ exports[`<DinoCard /> should render correctly 1`] = `
   <h2>
     Dino name
   </h2>
+  <p>
+    carnivore
+  </p>
+  <p>
+    Late Jurassic
+  </p>
 </NavLink>
 `;

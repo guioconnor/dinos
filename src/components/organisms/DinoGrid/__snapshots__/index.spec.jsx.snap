@@ -9,9 +9,55 @@ exports[`<DinoGrid /> With a non-empty data set should render a grid with dino c
     <br />
      dinosaur page
   </h1>
-  <img
-    alt="dinosaurs"
-    className="main"
+  <Connect(PeriodFilter)
+    filterName="diet"
+    filterValues={
+      Array [
+        Object {
+          "name": "All",
+          "value": null,
+        },
+        Object {
+          "name": "Carnivore",
+          "value": "carnivore",
+        },
+        Object {
+          "name": "Herbivore",
+          "value": "herbivore",
+        },
+        Object {
+          "name": "Omnivore",
+          "value": "omnivore",
+        },
+      ]
+    }
+  />
+  <Connect(PeriodFilter)
+    filterName="period"
+    filterValues={
+      Array [
+        Object {
+          "name": "All",
+          "value": null,
+        },
+        Object {
+          "name": "Early Jurassic",
+          "value": "Early Jurassic",
+        },
+        Object {
+          "name": "Late Jurassic",
+          "value": "Late Jurassic",
+        },
+        Object {
+          "name": "Early Cretaceous",
+          "value": "Early Cretaceous",
+        },
+        Object {
+          "name": "Late Cretaceous",
+          "value": "Late Cretaceous",
+        },
+      ]
+    }
   />
   <div
     className="container"
@@ -58,9 +104,55 @@ exports[`<DinoGrid /> With an empty data set should render an empty grid 1`] = `
     <br />
      dinosaur page
   </h1>
-  <img
-    alt="dinosaurs"
-    className="main"
+  <Connect(PeriodFilter)
+    filterName="diet"
+    filterValues={
+      Array [
+        Object {
+          "name": "All",
+          "value": null,
+        },
+        Object {
+          "name": "Carnivore",
+          "value": "carnivore",
+        },
+        Object {
+          "name": "Herbivore",
+          "value": "herbivore",
+        },
+        Object {
+          "name": "Omnivore",
+          "value": "omnivore",
+        },
+      ]
+    }
+  />
+  <Connect(PeriodFilter)
+    filterName="period"
+    filterValues={
+      Array [
+        Object {
+          "name": "All",
+          "value": null,
+        },
+        Object {
+          "name": "Early Jurassic",
+          "value": "Early Jurassic",
+        },
+        Object {
+          "name": "Late Jurassic",
+          "value": "Late Jurassic",
+        },
+        Object {
+          "name": "Early Cretaceous",
+          "value": "Early Cretaceous",
+        },
+        Object {
+          "name": "Late Cretaceous",
+          "value": "Late Cretaceous",
+        },
+      ]
+    }
   />
   <div
     className="container"
