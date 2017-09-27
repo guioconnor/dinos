@@ -1,13 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import DietIcon from "../../atoms/DietIcon";
+import HabitatIcon from "../../atoms/HabitatIcon";
 
 const CardLink = styled(NavLink)`
-  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
   width: 46%;
   background: #fff;
   border-radius: 10px;
   margin: 1%;
+  text-decoration: none;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 
   @media (min-width: 800px) {
@@ -27,25 +32,40 @@ const CardLink = styled(NavLink)`
     transition-timing-function: ease-in-out;
     transform: scale(2.4);
   }
+`;
 
-  &:hover h2 {
-    transition: transform 0.15s 0.1s;
-    transition-timing-function: ease-in-out;
-    transform: scale(2.4);
-  }
+const ImageContainer = styled.div`
+  flex-grow: 1;
+  margin-bottom: 10px;
 `;
 
 const CardImage = styled.img`
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
 `;
+
+const Icons = styled.ul`
+  display: flex;
+  justify-content: center;
+
+  & > span {
+    margin: 0 5px;
+  }
+`;
+
+const H2 = styled.h2`margin-top: 20px;`;
 
 const DinoCard = ({ dino }) => (
   <CardLink to={`/dino/${dino.name}`}>
-    <CardImage src={dino.image} alt={dino.name} />
-    <h2>{dino.name}</h2>
-    <p>{dino.diet}</p>
-    <p>{dino.period}</p>
+    <ImageContainer>
+      <CardImage src={dino.image} alt={dino.name} />
+    </ImageContainer>
+    {/* <p>{dino.period}</p> */}
+    <Icons>
+      <DietIcon diet={dino.diet} />
+      <HabitatIcon habitat={dino.habitat} />
+    </Icons>
+    <H2>{dino.name}</H2>
   </CardLink>
 );
 

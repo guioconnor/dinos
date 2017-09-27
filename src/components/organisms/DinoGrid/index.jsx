@@ -4,14 +4,14 @@ import DinoCard from "../DinoCard";
 import Filter from "../../../containers/FilterContainer";
 
 const dietFilterValues = [
-  { value: null, name: "All" },
+  { value: null, name: "All Diets" },
   { value: "carnivore", name: "Carnivore" },
   { value: "herbivore", name: "Herbivore" },
   { value: "omnivore", name: "Omnivore" }
 ];
 
 const periodFilterValues = [
-  { value: null, name: "All" },
+  { value: null, name: "All Periods" },
   { value: "Early Jurassic", name: "Early Jurassic" },
   { value: "Late Jurassic", name: "Late Jurassic" },
   { value: "Early Cretaceous", name: "Early Cretaceous" },
@@ -48,7 +48,11 @@ const DinoGrid = ({ dinoData, mainIllustration }) => (
     {/* <MainImage className="main" src={mainIllustration} alt="dinosaurs" /> */}
     <Filter filterName="diet" filterValues={dietFilterValues} />
     <Filter filterName="period" filterValues={periodFilterValues} />
-    <Container>{dinoData.map(dino => <DinoCard dino={dino} />)}</Container>
+    <Container>
+      {dinoData
+        .filter(dino => !!dino.image)
+        .map(dino => <DinoCard dino={dino} />)}
+    </Container>
   </div>
 );
 

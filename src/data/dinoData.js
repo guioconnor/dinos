@@ -10,6 +10,7 @@ const dinoData = [
     length: "12m",
     period: "Late Jurassic",
     mya: "156-144",
+    habitat: "land",
     info:
       "Allosaurus was an apex predator in the Late Jurassic in North America."
   },
@@ -34,6 +35,7 @@ const dinoData = [
     length: "30m",
     period: "Late Jurassic",
     mya: "155-140",
+    habitat: "land",
     info:
       "Brachiosaurus was a large, North American sauropod dinosaur with an arch encircling its nasal opening."
   },
@@ -70,6 +72,7 @@ const dinoData = [
     length: "14m",
     period: "Late Cretaceous",
     mya: "80.5",
+    habitat: "sea",
     info:
       "Elasmosaurus was an aquatic dinosaur with an extremely long neck that likely fed on other smaller aquatic fauna like fish, molluscs, and squid. E.D. Cope mistakenly placed the skull of an Elasmosaurus on the much shorter tail rather than the extremely long neck."
   },
@@ -82,6 +85,7 @@ const dinoData = [
     length: "23m",
     period: "Late Jurassic",
     mya: "154-142",
+    habitat: "land",
     info:
       "Giraffatitan was a large sauropod related to Brachiosaurus with huge nostrils and nasal openings in its skull."
   },
@@ -165,11 +169,12 @@ const dinoData = [
     length: "18m",
     period: "Early Cretaceous",
     mya: "112-97",
+    habitat: "land",
     info:
       "Spinosaurus was one of the largest carnivore dinosaurs to walk the Earth. Its diet consisted mostly of fish and the large spines on its back likely formed a sail."
   },
   {
-    // "image": tyrannosaurus,
+    image: Silhouettes.tyrannosaurusRex,
     name: "Tyrannosaurus",
     pronunciation: "tie-RAN-oh-sore-us",
     meaningOfName: "tyrant lizard",
@@ -177,6 +182,8 @@ const dinoData = [
     length: "12m",
     period: "Late Cretaceous",
     mya: "68-66",
+    legCount: 2,
+    habitat: "land",
     info:
       "Tyrannosaurus is well-represented in both fiction and history with over 50 specimens discovered. It and was one of the last non-avian dinosaurs to exist before the extinction event. Tyrannosaurus had a massive skull and a long heavy tail."
   },
@@ -229,175 +236,199 @@ const dinoData = [
   },
   {
     image: Silhouettes.abelisaurus,
-    name: "Abelisaurus"
+    name: "Abelisaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.camarosaurus,
-    name: "Camarosaurus"
+    name: "Camarosaurus",
+    legCount: 4,
+    habitat: "land"
   },
   {
     image: Silhouettes.claosaurus,
-    name: "Claosaurus"
+    name: "Claosaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.eromangasaurus,
-    name: "Eromangasaurus"
+    name: "Eromangasaurus",
+    habitat: "sea"
   },
   {
     image: Silhouettes.mamenchisaurus,
-    name: "Mamenchisaurus"
-  },
-  {
-    image: Silhouettes.spinosaurus,
-    name: "Spinosaurus"
+    name: "Mamenchisaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.aerosteon,
-    name: "Aerosteon"
+    name: "Aerosteon",
+    habitat: "land"
   },
   {
     image: Silhouettes.camptosaurus,
-    name: "Camptosaurus"
+    name: "Camptosaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.daspletosaurus,
-    name: "Daspletosaurus"
+    name: "Daspletosaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.gigantoraptor,
-    name: "Gigantoraptor"
+    name: "Gigantoraptor",
+    habitat: "land"
   },
   {
     image: Silhouettes.mapusaurus,
-    name: "Mapusaurus"
-  },
-  {
-    image: Silhouettes.tyrannosaurusRex,
-    name: "TyrannosaurusRex"
+    name: "Mapusaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.albertosaurus,
-    name: "Albertosaurus"
+    name: "Albertosaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.carcharodontosaurus,
-    name: "Carcharodontosaurus"
+    name: "Carcharodontosaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.deinonychus,
-    name: "Deinonychus"
-  },
-  {
-    image: Silhouettes.giraffatitan,
-    name: "Giraffatitan"
+    name: "Deinonychus",
+    habitat: "land"
   },
   {
     image: Silhouettes.massospondylus,
-    name: "Massospondylus"
+    name: "Massospondylus",
+    habitat: "land"
   },
   {
     image: Silhouettes.allosaurus,
-    name: "Allosaurus"
+    name: "Allosaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.caudipteryx,
-    name: "Caudipteryx"
+    name: "Caudipteryx",
+    habitat: "land"
   },
   {
     image: Silhouettes.dilong,
-    name: "Dilong"
+    name: "Dilong",
+    habitat: "land"
   },
   {
     image: Silhouettes.iguanodon,
-    name: "Iguanodon"
+    name: "Iguanodon",
+    habitat: "land"
   },
   {
     image: Silhouettes.megalosaurus,
-    name: "Megalosaurus"
+    name: "Megalosaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.velociraptor,
-    name: "Velociraptor"
+    name: "Velociraptor",
+    habitat: "land"
   },
   {
     image: Silhouettes.archaeopteryx,
-    name: "Archaeopteryx"
+    name: "Archaeopteryx",
+    habitat: "land"
   },
   {
     image: Silhouettes.centrosaurus,
-    name: "Centrosaurus"
+    name: "Centrosaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.diplodocus,
-    name: "Diplodocus"
+    name: "Diplodocus",
+    habitat: "land"
   },
   {
     image: Silhouettes.irritator,
-    name: "Irritator"
+    name: "Irritator",
+    habitat: "land"
   },
   {
     image: Silhouettes.microraptor,
-    name: "Microraptor"
+    name: "Microraptor",
+    habitat: "sky"
   },
   {
     image: Silhouettes.argentinosaurus,
-    name: "Argentinosaurus"
+    name: "Argentinosaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.cetiosaurus,
-    name: "Cetiosaurus"
+    name: "Cetiosaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.edmontosaurus,
-    name: "Edmontosaurus"
+    name: "Edmontosaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.leyesaurus,
-    name: "Leyesaurus"
+    name: "Leyesaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.monoclonius,
-    name: "Monoclonius"
+    name: "Monoclonius",
+    habitat: "land"
   },
   {
     image: Silhouettes.baryonyx,
-    name: "Baryonyx"
+    name: "Baryonyx",
+    habitat: "land"
   },
   {
     image: Silhouettes.chasmosaurus,
-    name: "Chasmosaurus"
-  },
-  {
-    image: Silhouettes.elasmosaurus,
-    name: "Elasmosaurus"
+    name: "Chasmosaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.magyarosaurus,
-    name: "Magyarosaurus"
+    name: "Magyarosaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.plateosaurus,
-    name: "Plateosaurus"
+    name: "Plateosaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.brachiosaurus,
-    name: "Brachiosaurus"
+    name: "Brachiosaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.citipati,
-    name: "Citipati"
+    name: "Citipati",
+    habitat: "land"
   },
   {
     image: Silhouettes.epidexipteryx,
-    name: "Epidexipteryx"
+    name: "Epidexipteryx",
+    habitat: "land"
   },
   {
     image: Silhouettes.majungasaurus,
-    name: "Majungasaurus"
+    name: "Majungasaurus",
+    habitat: "land"
   },
   {
     image: Silhouettes.pterodactyl,
-    name: "Pterodactyl"
+    name: "Pterodactyl",
+    habitat: "sky"
   }
 ];
 
