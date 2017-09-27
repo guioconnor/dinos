@@ -10,6 +10,7 @@ const CardLink = styled(NavLink)`
   padding: 20px;
   width: 46%;
   background: #fff;
+  color: #333;
   border-radius: 10px;
   margin: 1%;
   text-decoration: none;

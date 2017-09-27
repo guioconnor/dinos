@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
-  background: #bbe;
+  background: #567;
   border-radius: 3px;
   border: none;
+  color: #cde;
 `;
 
 const FilterButton = ({ onClick, value, children }) => (

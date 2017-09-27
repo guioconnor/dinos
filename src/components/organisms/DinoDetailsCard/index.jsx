@@ -11,7 +11,8 @@ const InfoList = styled.ul`
 const InfoItem = styled.li`
   padding: 5px 20px;
   margin: 2px 0;
-  background: #bbe;
+  background: #567;
+  color: #cde;
 `;
 
 const Image = styled.img`

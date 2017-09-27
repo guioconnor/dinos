@@ -9,11 +9,12 @@ const Nav = styled.nav`
     padding: 5px;
     border-radius: 3px;
     text-decoration: none;
+    color: #cde;
   }
 
   & a.active,
   & a:hover {
-    background: #bbe;
+    background: #567;
   }
 `;
 
