@@ -4,53 +4,47 @@ exports[`<DinoDetailsCard /> With an empty data set should render an empty grid 
 <div
   className="App"
 >
-  <h1>
-    Thomas and Marco's 
-    <br />
-     
+  <styled.h1>
     name
-     page
-  </h1>
-  <img
-    alt="dinosaurs"
+  </styled.h1>
+  <styled.img
+    alt="name"
     className="main"
     src="image"
   />
-  <ul
-    className="dino-data"
-  >
-    <li>
+  <styled.ul>
+    <styled.li>
       name: 
       name
-    </li>
-    <li>
+    </styled.li>
+    <styled.li>
       pronunciation: 
       pronunciation
-    </li>
-    <li>
+    </styled.li>
+    <styled.li>
       meaningOfName: 
       meaningOfName
-    </li>
-    <li>
+    </styled.li>
+    <styled.li>
       diet: 
       diet
-    </li>
-    <li>
+    </styled.li>
+    <styled.li>
       length: 
       length
-    </li>
-    <li>
+    </styled.li>
+    <styled.li>
       period: 
       period
-    </li>
-    <li>
+    </styled.li>
+    <styled.li>
       mya: 
       mya
-    </li>
-    <li>
+    </styled.li>
+    <styled.li>
       info: 
       info
-    </li>
-  </ul>
+    </styled.li>
+  </styled.ul>
 </div>
 `;

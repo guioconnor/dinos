@@ -1,24 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DinoCard /> should render correctly 1`] = `
-<NavLink
-  activeClassName="active"
-  ariaCurrent="true"
-  className="dino"
+<Styled(NavLink)
   to="/dino/Dino name"
 >
-  <img
-    alt="Dino name"
-    src="abelisaurus"
-  />
-  <h2>
+  <styled.div>
+    <styled.img
+      alt="Dino name"
+      src="abelisaurus"
+    />
+  </styled.div>
+  <styled.ul>
+    <DietIcon
+      diet="carnivore"
+    />
+    <HabitatIcon />
+  </styled.ul>
+  <styled.h2>
     Dino name
-  </h2>
-  <p>
-    carnivore
-  </p>
-  <p>
-    Late Jurassic
-  </p>
-</NavLink>
+  </styled.h2>
+</Styled(NavLink)>
 `;

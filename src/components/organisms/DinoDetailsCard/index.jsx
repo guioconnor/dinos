@@ -14,6 +14,15 @@ const InfoItem = styled.li`
   background: #bbe;
 `;
 
+const Image = styled.img`
+  background: #fff;
+  margin: 30px;
+  padding: 30px;
+  border-radius: 10%;
+`;
+
+const H1 = styled.h1`font-size: 30px;`;
+
 const DinoDetailsCard = ({
   dino: {
     name,
@@ -28,10 +37,8 @@ const DinoDetailsCard = ({
   }
 }) => (
   <div className="App">
-    <h1>
-      Thomas and Marco's <br /> {name} page
-    </h1>
-    <img className="main" src={image} alt="dinosaurs" />
+    <H1>{name}</H1>
+    <Image className="main" src={image} alt={name} />
     <InfoList>
       {name && <InfoItem>name: {name}</InfoItem>}
       {pronunciation && <InfoItem>pronunciation: {pronunciation}</InfoItem>}
