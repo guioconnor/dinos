@@ -23,8 +23,8 @@ const Navigation = () => (
     <NavLink exact activeClassName="active" to="/dinos">
       Home
     </NavLink>
-    <NavLink activeClassName="active" to={{ pathname: "/about" }}>
-      About
+    <NavLink activeClassName="active" to={{ pathname: "/memory" }}>
+      Memory game
     </NavLink>
     <NavLink activeClassName="active" to={{ pathname: "/contact" }}>
       Contact

@@ -32,11 +32,7 @@ const DinoGrid = ({ dinoData, mainIllustration }) => (
     <H1>Dinosaurs</H1>
     <Filter filterName="diet" filterValues={dietFilterValues} />
     <Filter filterName="period" filterValues={periodFilterValues} />
-    <Container>
-      {dinoData
-        .filter(dino => !!dino.image)
-        .map(dino => <DinoCard dino={dino} />)}
-    </Container>
+    <Container>{dinoData.map(dino => <DinoCard dino={dino} />)}</Container>
   </div>
 );
 

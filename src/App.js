@@ -7,6 +7,7 @@ import rootReducer from "./redux";
 
 import dinoData from "./data/dinoData.js";
 import DinoGrid from "./containers/DinoGridContainer";
+import MemoryGame from "./containers/MemoryGameContainer";
 import DinoDetailsCard from "./components/organisms/DinoDetailsCard";
 import Navigation from "./components/organisms/Navigation";
 
@@ -31,7 +32,14 @@ const addLoggingToDispatch = store => {
   };
 };
 
-const store = createStore(rootReducer, { dinos: dinoData, filters: {} });
+const store = createStore(
+  rootReducer,
+  {
+    dinos: dinoData.filter(dino => !!dino.image),
+    filters: {}
+  },
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 store.dispatch = addLoggingToDispatch(store);
 
@@ -52,7 +60,7 @@ const App = () => (
             />
           )}
         />
-        <Route path="/about" render={() => <h1>About</h1>} />
+        <Route path="/memory" component={MemoryGame} />
         <Route path="/contact" render={() => <h1>Contact</h1>} />
       </div>
     </Router>

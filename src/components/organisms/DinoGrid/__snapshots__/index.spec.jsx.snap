@@ -5,9 +5,7 @@ exports[`<DinoGrid /> With a non-empty data set should render a grid with dino c
   className="App"
 >
   <styled.h1>
-    Thomas and Marco's 
-    <br />
-     dinosaur page
+    Dinosaurs
   </styled.h1>
   <Connect(PeriodFilter)
     filterName="diet"
@@ -75,6 +73,20 @@ exports[`<DinoGrid /> With a non-empty data set should render a grid with dino c
         }
       }
     />
+    <DinoCard
+      dino={
+        Object {
+          "diet": "herbivorous",
+          "info": "Named the 'deceptive lizard' because its skull was confused with those of other sauropods until 1909.",
+          "length": "21m",
+          "meaningOfName": "deceptive lizard",
+          "mya": "154-145",
+          "name": "Apatosaurus",
+          "period": "Late Jurassic",
+          "pronunciation": "ah-PAT-oh-sore-us",
+        }
+      }
+    />
   </styled.div>
 </div>
 `;
@@ -84,9 +96,7 @@ exports[`<DinoGrid /> With an empty data set should render an empty grid 1`] = `
   className="App"
 >
   <styled.h1>
-    Thomas and Marco's 
-    <br />
-     dinosaur page
+    Dinosaurs
   </styled.h1>
   <Connect(PeriodFilter)
     filterName="diet"

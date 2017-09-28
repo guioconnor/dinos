@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import DinoImage from "../../atoms/DinoImage";
 
 const InfoList = styled.ul`
   list-style-type: none;
@@ -13,13 +14,6 @@ const InfoItem = styled.li`
   margin: 2px 0;
   background: #567;
   color: #cde;
-`;
-
-const Image = styled.img`
-  background: #fff;
-  margin: 30px;
-  padding: 30px;
-  border-radius: 10%;
 `;
 
 const H1 = styled.h1`font-size: 30px;`;
@@ -39,7 +33,8 @@ const DinoDetailsCard = ({
 }) => (
   <div className="App">
     <H1>{name}</H1>
-    <Image className="main" src={image} alt={name} />
+
+    <DinoImage className="main" src={image} alt={name} />
     <InfoList>
       {name && <InfoItem>name: {name}</InfoItem>}
       {pronunciation && <InfoItem>pronunciation: {pronunciation}</InfoItem>}

@@ -7,7 +7,7 @@ exports[`<DinoDetailsCard /> With an empty data set should render an empty grid 
   <styled.h1>
     name
   </styled.h1>
-  <styled.img
+  <DinoImage
     alt="name"
     className="main"
     src="image"

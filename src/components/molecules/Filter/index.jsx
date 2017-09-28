@@ -5,6 +5,8 @@ import FilterButton from "../../atoms/FilterButton";
 const List = styled.ul`
   display: flex;
   justify-content: center;
+  background: #567;
+  border-radius: 3px;
 `;
 const ListItem = styled.li`margin: 10px;`;
 

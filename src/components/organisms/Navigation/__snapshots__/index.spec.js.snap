@@ -15,11 +15,11 @@ exports[`<Navigation /> should render correctly 1`] = `
     ariaCurrent="true"
     to={
       Object {
-        "pathname": "/about",
+        "pathname": "/memory",
       }
     }
   >
-    About
+    Memory game
   </NavLink>
   <NavLink
     activeClassName="active"

@@ -383,7 +383,8 @@ const dinoData = [
   {
     image: Silhouettes.monoclonius,
     name: "Monoclonius",
-    habitat: "land"
+    habitat: "land",
+    diet: "herbivore"
   },
   {
     image: Silhouettes.baryonyx,
@@ -428,7 +429,8 @@ const dinoData = [
   {
     image: Silhouettes.pterodactyl,
     name: "Pterodactyl",
-    habitat: "sky"
+    habitat: "sky",
+    diet: "carnivore"
   }
 ];
 

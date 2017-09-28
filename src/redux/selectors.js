@@ -1,3 +1,5 @@
+import { randomise, head } from "../lib/arrayHelpers";
+
 const getDinosAlphabeticallySorted = dinos => {
   return dinos.sort(
     (d1, d2) => (d1.name.toLowerCase() > d2.name.toLowerCase() ? 1 : -1)
@@ -16,4 +18,9 @@ const getFilteredDinos = dinos => filters => {
   }, getDinosAlphabeticallySorted(dinos));
 };
 
-export { getDinosAlphabeticallySorted, getFilteredDinos };
+const getRandomDinos = dinos => count => {
+  const randomDinos = randomise(dinos);
+  return head(randomDinos, count);
+};
+
+export { getDinosAlphabeticallySorted, getFilteredDinos, getRandomDinos };
