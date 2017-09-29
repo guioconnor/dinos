@@ -60,8 +60,7 @@ const App = () => (
             />
           )}
         />
-        <Route path="/memory" component={MemoryGame} />
-        <Route path="/contact" render={() => <h1>Contact</h1>} />
+        <Route path="/dinos/memory" component={MemoryGame} />
       </div>
     </Router>
   </Provider>
