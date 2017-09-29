@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DinoCard /> should render correctly 1`] = `
-<Styled(NavLink)
-  to="/dino/Dino name"
->
+<styled.div>
   <styled.div>
     <DinoImage
       alt="Dino name"
@@ -11,14 +9,6 @@ exports[`<DinoCard /> should render correctly 1`] = `
       width={50}
     />
   </styled.div>
-  <styled.ul>
-    <DietIcon
-      diet="carnivore"
-    />
-    <HabitatIcon />
-  </styled.ul>
-  <styled.h2>
-    Dino name
-  </styled.h2>
-</Styled(NavLink)>
+   
+</styled.div>
 `;

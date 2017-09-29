@@ -5,15 +5,14 @@ import DietIcon from "../../atoms/DietIcon";
 import HabitatIcon from "../../atoms/HabitatIcon";
 import DinoImage from "../../atoms/DinoImage";
 
-const CardLink = styled(NavLink)`
-  width: 200px;
+const CardWrapper = styled.div`
+  width: ${props => (props.width ? `${props.width}px` : "200px")};
   display: flex;
   flex-direction: column;
   padding: 20px;
   background: #fff;
   color: #333;
   border-radius: 10px;
-  margin: 20px;
   text-decoration: none;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 
@@ -24,7 +23,6 @@ const CardLink = styled(NavLink)`
 
 const ImageContainer = styled.div`
   width: 100%;
-  margin-bottom: 10px;
   padding: 10px;
 `;
 
@@ -39,17 +37,21 @@ const Icons = styled.ul`
 
 const H2 = styled.h2`margin-top: 20px;`;
 
-const DinoCard = ({ dino }) => (
-  <CardLink to={`/dino/${dino.name}`}>
+const DinoCard = ({ dino, displayDetails, width }) => (
+  <CardWrapper width={width}>
     <ImageContainer>
       <DinoImage src={dino.image} alt={dino.name} width={50} width={50} />
     </ImageContainer>
-    <Icons>
-      <DietIcon diet={dino.diet} />
-      <HabitatIcon habitat={dino.habitat} />
-    </Icons>
-    <H2>{dino.name}</H2>
-  </CardLink>
+    {displayDetails && (
+      <div>
+        <Icons>
+          <DietIcon diet={dino.diet} />
+          <HabitatIcon habitat={dino.habitat} />
+        </Icons>
+        <H2>{dino.name}</H2>
+      </div>
+    )}{" "}
+  </CardWrapper>
 );
 
 export default DinoCard;

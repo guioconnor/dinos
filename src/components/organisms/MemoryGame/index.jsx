@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import DinoImage from "../../atoms/DinoImage";
+// import DinoImage from "../../atoms/DinoImage";
+import DinoCard from "../DinoCard";
 import { randomise } from "../../../lib/arrayHelpers";
 
 const Grid = styled.div`
@@ -122,17 +123,20 @@ class MemoryGame extends React.Component {
     return (
       <div>
         <Grid>
-          {cards.map(({ image, name, id, turned, found }) => (
-            <Button onClick={() => this.onClick(id)}>
-              {found ? (
-                <FoundCard src={image} alt={name} width={150} height={150} />
-              ) : turned ? (
-                <DinoImage src={image} alt={name} width={150} height={150} />
-              ) : (
-                <Placeholder />
-              )}
-            </Button>
-          ))}
+          {cards.map(dino => {
+            const { image, name, id, turned, found } = dino;
+            return (
+              <Button onClick={() => this.onClick(id)}>
+                {found ? (
+                  <FoundCard src={image} alt={name} width={150} height={150} />
+                ) : turned ? (
+                  <DinoCard dino={dino} width={150} />
+                ) : (
+                  <Placeholder />
+                )}
+              </Button>
+            );
+          })}
         </Grid>
         <span>
           {this.pairsAttempted} attempts of{" "}

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import DinoLink from "../../atoms/DinoLink";
 import DinoCard from "../DinoCard";
 import Filter from "../../../containers/FilterContainer";
 
@@ -18,11 +19,18 @@ const periodFilterValues = [
   { value: "Late Cretaceous", name: "Late Cretaceous" }
 ];
 
-const Container = styled.div`
+const Container = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+`;
+
+const GridItem = styled.li`margin: 20px;`;
+
+const StyledDinoLink = styled(DinoLink)`
+  display: block;
+  margin: 20px;
 `;
 
 const H1 = styled.h1`font-size: 50px;`;
@@ -32,7 +40,15 @@ const DinoGrid = ({ dinoData, mainIllustration }) => (
     <H1>Dinosaurs</H1>
     <Filter filterName="diet" filterValues={dietFilterValues} />
     <Filter filterName="period" filterValues={periodFilterValues} />
-    <Container>{dinoData.map(dino => <DinoCard dino={dino} />)}</Container>
+    <Container>
+      {dinoData.map(dino => (
+        <GridItem>
+          <StyledDinoLink dinoName={dino.name}>
+            <DinoCard dino={dino} displayDetails />
+          </StyledDinoLink>
+        </GridItem>
+      ))}
+    </Container>
   </div>
 );
 
