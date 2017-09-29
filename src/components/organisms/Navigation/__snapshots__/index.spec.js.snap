@@ -15,7 +15,7 @@ exports[`<Navigation /> should render correctly 1`] = `
     ariaCurrent="true"
     to={
       Object {
-        "pathname": "/memory",
+        "pathname": "/dinos/memory",
       }
     }
   >
