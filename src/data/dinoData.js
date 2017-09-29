@@ -306,11 +306,6 @@ const dinoData = [
     habitat: "land"
   },
   {
-    image: Silhouettes.allosaurus,
-    name: "Allosaurus",
-    habitat: "land"
-  },
-  {
     image: Silhouettes.caudipteryx,
     name: "Caudipteryx",
     habitat: "land"
@@ -404,11 +399,6 @@ const dinoData = [
   {
     image: Silhouettes.plateosaurus,
     name: "Plateosaurus",
-    habitat: "land"
-  },
-  {
-    image: Silhouettes.brachiosaurus,
-    name: "Brachiosaurus",
     habitat: "land"
   },
   {
