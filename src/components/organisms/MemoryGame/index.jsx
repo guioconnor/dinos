@@ -5,8 +5,10 @@ import { randomise } from "../../../lib/arrayHelpers";
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
-  grid-gap: 10px;
+  max-width: 790px;
+  margin: 30px auto;
+  grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
+  grid-gap: 20px 0.5%;
   grid-auto-rows: minmax(100px, auto);
 
   & a {
@@ -19,22 +21,29 @@ const Button = styled.button`
   margin: 0;
   border: none;
   background: transparent;
+  overflow: hidden;
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 const Placeholder = styled.div`
   background: #fff;
   padding: 30px;
   border-radius: 10%;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
+  margin: auto;
 `;
 
 const FoundCard = styled.div`
   background: rgba(255, 255, 255, 0.4);
   padding: 30px;
   border-radius: 10%;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
+  margin: auto;
 `;
 
 class MemoryGame extends React.Component {
@@ -116,9 +125,9 @@ class MemoryGame extends React.Component {
           {cards.map(({ image, name, id, turned, found }) => (
             <Button onClick={() => this.onClick(id)}>
               {found ? (
-                <FoundCard src={image} alt={name} width={200} height={200} />
+                <FoundCard src={image} alt={name} width={150} height={150} />
               ) : turned ? (
-                <DinoImage src={image} alt={name} width={200} height={200} />
+                <DinoImage src={image} alt={name} width={150} height={150} />
               ) : (
                 <Placeholder />
               )}
