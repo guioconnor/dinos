@@ -67,11 +67,11 @@ const FeatureImageContainer = styled.div`
 const CardBody = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   padding: 20px;
 
   @media (min-width: 768px) {
     flex-direction: row;
+    align-items: flex-start;
   }
 `;
 
