@@ -75,7 +75,7 @@ class MemoryGame extends React.Component {
 
     setTimeout(() => {
       this.setState({ cards });
-    }, 5000);
+    }, 1000);
 
     const foundCardsCount = cards.filter(c => c.found).map(c => c.id).length;
     if (foundCardsCount === this.boardSize) {
