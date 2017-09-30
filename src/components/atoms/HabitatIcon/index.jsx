@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const Container = styled.span`font-size: 30px;`;
+const Container = styled.span`
+  font-size: 30px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+`;
 
 const HabitatIcon = ({ habitat }) => {
   switch (habitat) {
