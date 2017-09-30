@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import DinoCard from "../DinoCard";
 import PlainButton from "../../atoms/PlainButton";
+import Roar, { playRoar } from "../../atoms/Roar";
 import { randomise } from "../../../lib/arrayHelpers";
 
 const Grid = styled.div`
@@ -55,7 +56,7 @@ class MemoryGame extends React.Component {
       this.pairsAttempted++;
       setTimeout(() => {
         this.checkMatch();
-      }, 1500);
+      }, 100);
     }
   };
 
@@ -67,11 +68,14 @@ class MemoryGame extends React.Component {
     if (cards[turnedCards[0]].name === cards[turnedCards[1]].name) {
       cards[turnedCards[0]].found = true;
       cards[turnedCards[1]].found = true;
+      playRoar();
     }
     cards[turnedCards[0]].turned = false;
     cards[turnedCards[1]].turned = false;
 
-    this.setState({ cards });
+    setTimeout(() => {
+      this.setState({ cards });
+    }, 5000);
 
     const foundCardsCount = cards.filter(c => c.found).map(c => c.id).length;
     if (foundCardsCount === this.boardSize) {
@@ -93,6 +97,7 @@ class MemoryGame extends React.Component {
     const { cards } = this.state;
     return (
       <div>
+        <Roar />
         <Grid>
           {cards.map(dino => {
             const { image, name, id, turned, found } = dino;
