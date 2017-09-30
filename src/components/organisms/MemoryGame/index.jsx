@@ -1,50 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-// import DinoImage from "../../atoms/DinoImage";
 import DinoCard from "../DinoCard";
+import PlainButton from "../../atoms/PlainButton";
 import { randomise } from "../../../lib/arrayHelpers";
 
 const Grid = styled.div`
   display: grid;
   max-width: 790px;
   margin: 30px auto;
-  grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
-  grid-gap: 20px 0.5%;
+  grid-template-columns: 24.7% 24.7% 24.7% 24.7%;
+  grid-gap: 25px 0.3%;
   grid-auto-rows: minmax(100px, auto);
+  user-select: none;
 
   & a {
     width: auto;
   }
-`;
-
-const Button = styled.button`
-  padding: 0;
-  margin: 0;
-  border: none;
-  background: transparent;
-  overflow: hidden;
-
-  &:focus {
-    outline: none;
-  }
-`;
-
-const Placeholder = styled.div`
-  background: #fff;
-  padding: 30px;
-  border-radius: 10%;
-  height: 150px;
-  width: 150px;
-  margin: auto;
-`;
-
-const FoundCard = styled.div`
-  background: rgba(255, 255, 255, 0.4);
-  padding: 30px;
-  border-radius: 10%;
-  height: 150px;
-  width: 150px;
-  margin: auto;
 `;
 
 class MemoryGame extends React.Component {
@@ -84,7 +55,7 @@ class MemoryGame extends React.Component {
       this.pairsAttempted++;
       setTimeout(() => {
         this.checkMatch();
-      }, 1000);
+      }, 1500);
     }
   };
 
@@ -104,7 +75,7 @@ class MemoryGame extends React.Component {
 
     const foundCardsCount = cards.filter(c => c.found).map(c => c.id).length;
     if (foundCardsCount === this.boardSize) {
-      setTimeout(() => this.init(), 1000);
+      setTimeout(() => this.init(), 1500);
     }
   };
 
@@ -126,15 +97,15 @@ class MemoryGame extends React.Component {
           {cards.map(dino => {
             const { image, name, id, turned, found } = dino;
             return (
-              <Button onClick={() => this.onClick(id)}>
+              <PlainButton onClick={() => this.onClick(id)}>
                 {found ? (
-                  <FoundCard src={image} alt={name} width={150} height={150} />
+                  <DinoCard dino={dino} width={150} opacity={0.2} />
                 ) : turned ? (
                   <DinoCard dino={dino} width={150} />
                 ) : (
-                  <Placeholder />
+                  <DinoCard dino={dino} width={150} displayImage={false} />
                 )}
-              </Button>
+              </PlainButton>
             );
           })}
         </Grid>

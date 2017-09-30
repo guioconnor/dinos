@@ -6,7 +6,9 @@ import HabitatIcon from "../../atoms/HabitatIcon";
 import DinoImage from "../../atoms/DinoImage";
 
 const CardWrapper = styled.div`
-  width: ${props => (props.width ? `${props.width}px` : "200px")};
+  width: ${props => `${props.width}px`};
+  min-height: ${props => `${props.width}px`};
+  opacity: ${props => `${props.opacity}`};
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -37,11 +39,19 @@ const Icons = styled.ul`
 
 const H2 = styled.h2`margin-top: 20px;`;
 
-const DinoCard = ({ dino, displayDetails, width }) => (
-  <CardWrapper width={width}>
-    <ImageContainer>
-      <DinoImage src={dino.image} alt={dino.name} width={50} width={50} />
-    </ImageContainer>
+const DinoCard = ({
+  dino,
+  displayDetails,
+  displayImage = true,
+  opacity = 1,
+  width = 200
+}) => (
+  <CardWrapper width={width} opacity={opacity}>
+    {displayImage && (
+      <ImageContainer>
+        <DinoImage src={dino.image} alt={dino.name} width={50} width={50} />
+      </ImageContainer>
+    )}
     {displayDetails && (
       <div>
         <Icons>
