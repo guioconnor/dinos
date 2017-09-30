@@ -26,9 +26,6 @@ const Navigation = () => (
     <NavLink activeClassName="active" to={{ pathname: "/dinos/memory" }}>
       Memory game
     </NavLink>
-    <NavLink activeClassName="active" to={{ pathname: "/contact" }}>
-      Contact
-    </NavLink>
   </Nav>
 );
 
