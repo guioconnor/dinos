@@ -237,18 +237,21 @@ const dinoData = [
   {
     image: Silhouettes.abelisaurus,
     name: "Abelisaurus",
-    habitat: "land"
+    habitat: "land",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.camarosaurus,
     name: "Camarosaurus",
     legCount: 4,
-    habitat: "land"
+    habitat: "land",
+    diet: "herbivore"
   },
   {
     image: Silhouettes.claosaurus,
     name: "Claosaurus",
-    habitat: "land"
+    habitat: "land",
+    diet: "herbivore"
   },
   {
     image: Silhouettes.eromangasaurus,
@@ -258,117 +261,140 @@ const dinoData = [
   {
     image: Silhouettes.mamenchisaurus,
     name: "Mamenchisaurus",
-    habitat: "land"
+    habitat: "land",
+    diet: "herbivore"
   },
   {
     image: Silhouettes.aerosteon,
     name: "Aerosteon",
-    habitat: "land"
+    habitat: "land",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.camptosaurus,
     name: "Camptosaurus",
-    habitat: "land"
+    habitat: "land",
+    diet: "herbivore"
   },
   {
     image: Silhouettes.daspletosaurus,
     name: "Daspletosaurus",
-    habitat: "land"
+    habitat: "land",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.gigantoraptor,
     name: "Gigantoraptor",
-    habitat: "land"
+    habitat: "land",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.mapusaurus,
     name: "Mapusaurus",
-    habitat: "land"
+    habitat: "land",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.albertosaurus,
     name: "Albertosaurus",
-    habitat: "land"
+    habitat: "land",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.carcharodontosaurus,
     name: "Carcharodontosaurus",
-    habitat: "land"
+    habitat: "land",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.deinonychus,
     name: "Deinonychus",
-    habitat: "land"
+    habitat: "land",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.massospondylus,
     name: "Massospondylus",
-    habitat: "land"
+    habitat: "land",
+    diet: "herbivore"
   },
   {
     image: Silhouettes.caudipteryx,
     name: "Caudipteryx",
-    habitat: "land"
+    habitat: "land",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.dilong,
     name: "Dilong",
-    habitat: "land"
+    habitat: "land",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.iguanodon,
     name: "Iguanodon",
-    habitat: "land"
+    habitat: "land",
+    diet: "herbivore"
   },
   {
     image: Silhouettes.megalosaurus,
     name: "Megalosaurus",
-    habitat: "land"
+    habitat: "land",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.velociraptor,
     name: "Velociraptor",
-    habitat: "land"
+    habitat: "land",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.archaeopteryx,
     name: "Archaeopteryx",
-    habitat: "land"
+    habitat: "land",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.centrosaurus,
     name: "Centrosaurus",
-    habitat: "land"
+    habitat: "land",
+    diet: "herbivore"
   },
   {
     image: Silhouettes.diplodocus,
     name: "Diplodocus",
-    habitat: "land"
+    habitat: "land",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.irritator,
     name: "Irritator",
-    habitat: "land"
+    habitat: "land",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.microraptor,
     name: "Microraptor",
-    habitat: "sky"
+    habitat: "sky",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.argentinosaurus,
     name: "Argentinosaurus",
-    habitat: "land"
+    habitat: "land",
+    diet: "herbivore"
   },
   {
     image: Silhouettes.cetiosaurus,
     name: "Cetiosaurus",
-    habitat: "land"
+    habitat: "land",
+    diet: "herbivore"
   },
   {
     image: Silhouettes.edmontosaurus,
     name: "Edmontosaurus",
-    habitat: "land"
+    habitat: "land",
+    diet: "herbivore"
   },
   {
     image: Silhouettes.leyesaurus,
@@ -384,37 +410,44 @@ const dinoData = [
   {
     image: Silhouettes.baryonyx,
     name: "Baryonyx",
-    habitat: "land"
+    habitat: "land",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.chasmosaurus,
     name: "Chasmosaurus",
-    habitat: "land"
+    habitat: "land",
+    diet: "herbivore"
   },
   {
     image: Silhouettes.magyarosaurus,
     name: "Magyarosaurus",
-    habitat: "land"
+    habitat: "land",
+    diet: "herbivore"
   },
   {
     image: Silhouettes.plateosaurus,
     name: "Plateosaurus",
-    habitat: "land"
+    habitat: "land",
+    diet: "herbivore"
   },
   {
     image: Silhouettes.citipati,
     name: "Citipati",
-    habitat: "land"
+    habitat: "land",
+    diet: "omnivore"
   },
   {
     image: Silhouettes.epidexipteryx,
     name: "Epidexipteryx",
-    habitat: "land"
+    habitat: "land",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.majungasaurus,
     name: "Majungasaurus",
-    habitat: "land"
+    habitat: "land",
+    diet: "carnivore"
   },
   {
     image: Silhouettes.pterodactyl,
