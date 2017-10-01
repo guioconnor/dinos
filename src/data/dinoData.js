@@ -9,7 +9,7 @@ const dinoData = [
     diet: "Carnivore",
     length: "12m",
     period: "Late Jurassic",
-    mya: "156-144",
+    mya: [156, 144],
     habitat: "Land",
     info:
       "Allosaurus was an apex predator in the Late Jurassic in North America."
@@ -22,7 +22,7 @@ const dinoData = [
     diet: "Herbivore",
     length: "21m",
     period: "Late Jurassic",
-    mya: "154-145",
+    mya: [154, 145],
     info:
       "Named the 'deceptive lizard' because its skull was confused with those of other sauropods until 1909."
   },
@@ -34,7 +34,7 @@ const dinoData = [
     diet: "Herbivore",
     length: "30m",
     period: "Late Jurassic",
-    mya: "155-140",
+    mya: [155, 140],
     habitat: "Land",
     info:
       "Brachiosaurus was a large, North American sauropod dinosaur with an arch encircling its nasal opening."
@@ -47,7 +47,7 @@ const dinoData = [
     diet: "Carnivore",
     length: "0.65m",
     period: "Late Jurassic",
-    mya: "145-140",
+    mya: [145, 140],
     info:
       "Compsognathus was small and bipedal, roughly the size of a turkey. It lived in Europe and was the first dinosaur genus to be portrayed with feathers."
   },
@@ -59,7 +59,7 @@ const dinoData = [
     diet: "Herbivore",
     length: "estimated 4m",
     period: "Late Cretaceous",
-    mya: "66",
+    mya: [66, 66],
     info:
       "<em>Dracorex hogwartsia</em> was a pachycephalosaur that did not have a domed head. Instead, its skull was adorned with spikes and frills reminiscent of a dragon. A skull was discovered in the Hell Creek Formation in South Dakota and donated to the Children's Museum of Indianapolis in 2004. Its name was inspired by J.K. Rowling's Harry Potter series and the young visitors to the children's museum."
   },
@@ -71,7 +71,7 @@ const dinoData = [
     diet: "Carnivore",
     length: "14m",
     period: "Late Cretaceous",
-    mya: "80.5",
+    mya: [80.5, 80.5],
     habitat: "Sea",
     info:
       "Elasmosaurus was an aquatic dinosaur with an extremely long neck that likely fed on other smaller aquatic fauna like fish, molluscs, and squid. E.D. Cope mistakenly placed the skull of an Elasmosaurus on the much shorter tail rather than the extremely long neck."
@@ -84,7 +84,7 @@ const dinoData = [
     diet: "Herbivore",
     length: "23m",
     period: "Late Jurassic",
-    mya: "154-142",
+    mya: [154, 142],
     habitat: "Land",
     info:
       "Giraffatitan was a large sauropod related to Brachiosaurus with huge nostrils and nasal openings in its skull."
@@ -97,7 +97,7 @@ const dinoData = [
     diet: "Carnivore",
     length: "7m",
     period: "Late Cretaceous",
-    mya: "70-66",
+    mya: [70, 66],
     info: "Indosuchus had a flattened crest on its skull."
   },
   {
@@ -108,7 +108,7 @@ const dinoData = [
     diet: "Herbivore",
     length: "5m",
     period: "Early Jurassic",
-    mya: "205-190",
+    mya: [205, 190],
     info:
       "Jingshanosaurus was one of the last prosauropods, a long-necked herbivore able to walk on two legs."
   },
@@ -120,7 +120,7 @@ const dinoData = [
     diet: "Omnivore",
     length: "1.8m",
     period: "Late Cretaceous",
-    mya: "81-75",
+    mya: [81, 75],
     info:
       "Khaan was an oviraptor with a parrot-like beak, discovered in Mongolia."
   },
@@ -132,7 +132,7 @@ const dinoData = [
     diet: "Herbivore",
     length: "3m",
     period: "Early Cretaceous",
-    mya: "121-112",
+    mya: [121, 112],
     info:
       "Minmi was a small, anklyosaurian, armored dinosaur discovered in Australia."
   },
@@ -144,7 +144,7 @@ const dinoData = [
     diet: "Herbivore",
     length: "7m",
     period: "Early Cretaceous",
-    mya: "125-112",
+    mya: [125, 112],
     info:
       "Ouranosaurus was an iguanodont dinosaur in Africa. It had a large sail on its back supported by long, wide neural spines and an elnogated, flat skull."
   },
@@ -156,7 +156,7 @@ const dinoData = [
     diet: "Herbivore",
     length: "11m",
     period: "Late Cretaceous",
-    mya: "76-74",
+    mya: [76, 74],
     info:
       "Found in Canada and the USA, Parasaurolophus was a hadrosaur most famous for its long, elaborate cranial crest."
   },
@@ -168,7 +168,7 @@ const dinoData = [
     diet: "Carnivore",
     length: "18m",
     period: "Early Cretaceous",
-    mya: "112-97",
+    mya: [112, 97],
     habitat: "Land",
     info:
       "Spinosaurus was one of the largest carnivore dinosaurs to walk the Earth. Its diet consisted mostly of fish and the large spines on its back likely formed a sail."
@@ -181,7 +181,7 @@ const dinoData = [
     diet: "Carnivore",
     length: "12m",
     period: "Late Cretaceous",
-    mya: "68-66",
+    mya: [68, 66],
     legCount: 2,
     habitat: "Land",
     info:
@@ -195,7 +195,7 @@ const dinoData = [
     diet: "Carnivore",
     length: "6m",
     period: "Early Cretaceous",
-    mya: "112-100",
+    mya: [112, 100],
     info:
       "Found in the USA, Utahraptor resembled velociraptor but much larger, prompting Robert T. Bakker to pronounce it 'Spielberg's raptor' due to the velociraptors in the movie <em>Jurassic Park</em> being portrayed much larger than their historical counterparts."
   },
@@ -207,7 +207,7 @@ const dinoData = [
     diet: "Herbivore",
     length: "6.5m",
     period: "Early Jurassic",
-    mya: "183-175",
+    mya: [183, 175],
     info: "Vulcanodon was a primitive sauropod that lived in southern Africa."
   },
   {
@@ -218,7 +218,7 @@ const dinoData = [
     diet: "Herbivore",
     length: "6m",
     period: "Early Cretaceous",
-    mya: "78.5-77.5",
+    mya: [78.5, 77.5],
     info:
       "Xenoceratops had horns and a bony frill with elborate ornamentation of projections, knobs, and spikes."
   },
@@ -230,7 +230,7 @@ const dinoData = [
     diet: "Herbivore",
     length: "1.8m",
     period: "Early Cretaceous",
-    mya: "120-110",
+    mya: [120, 110],
     info:
       "An ornithopod dinosaur known only by a partial skull and postcranial fragments, not much about Zephyrosaurus has been discovered."
   },
@@ -280,6 +280,7 @@ const dinoData = [
     image: Silhouettes.daspletosaurus,
     name: "Daspletosaurus",
     habitat: "Land",
+    mya: [77, 74],
     diet: "Carnivore"
   },
   {

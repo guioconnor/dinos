@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import DietIcon from "../../atoms/DietIcon";
 import HabitatIcon from "../../atoms/HabitatIcon";
 import DinoImage from "../../atoms/DinoImage";
+import PeriodGraph from "../../atoms/PeriodGraph";
 
 const CardWrapper = styled.div`
   width: ${props => `${props.width}px`};
@@ -23,7 +24,7 @@ const CardWrapper = styled.div`
   }
 `;
 
-const ImageContainer = styled.div`
+const ElementContainer = styled.div`
   width: 100%;
   padding: 10px;
 `;
@@ -47,10 +48,11 @@ const DinoCard = ({
   width = 200
 }) => (
   <CardWrapper width={width} opacity={opacity}>
+    {displayDetails && <H2>{dino.name}</H2>}
     {displayImage && (
-      <ImageContainer>
+      <ElementContainer>
         <DinoImage src={dino.image} alt={dino.name} width={50} width={50} />
-      </ImageContainer>
+      </ElementContainer>
     )}
     {displayDetails && (
       <div>
@@ -58,9 +60,11 @@ const DinoCard = ({
           <DietIcon diet={dino.diet} />
           <HabitatIcon habitat={dino.habitat} />
         </Icons>
-        <H2>{dino.name}</H2>
+        <ElementContainer>
+          <PeriodGraph mya={dino.mya} simple />
+        </ElementContainer>
       </div>
-    )}{" "}
+    )}
   </CardWrapper>
 );
 

@@ -76,6 +76,7 @@ const CardBody = styled.div`
   padding: 20px;
   background: #3f4c4c;
   max-width: 700px;
+  min-width: 400px;
   margin: 20px auto;
   border-radius: 5px;
 
@@ -118,7 +119,7 @@ const DinoDetailsCard = ({
     <CardBody>
       <FeatureImageContainer>
         <DinoImage className="main" src={image} alt={name} />
-        <PeriodGraph period={period} />
+        <PeriodGraph mya={mya} />
       </FeatureImageContainer>
       <InfoList>
         {name && (
@@ -176,9 +177,10 @@ const DinoDetailsCard = ({
             <span>{period}</span>
           </InfoItem>
         )}
-        {mya && (
+        {mya &&
+        mya.length && (
           <InfoItem>
-            <span>Mya</span> <span>{mya}</span>
+            <span>Mya</span> <span>{mya.join(" - ")}</span>
           </InfoItem>
         )}
         {info && (
