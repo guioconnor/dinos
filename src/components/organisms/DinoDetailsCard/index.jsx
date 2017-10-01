@@ -4,6 +4,7 @@ import DinoImage from "../../atoms/DinoImage";
 import DietIcon from "../../atoms/DietIcon";
 import HabitatIcon from "../../atoms/HabitatIcon";
 import Icon from "../../atoms/Icon";
+import PeriodGraph from "../../atoms/PeriodGraph";
 
 const InfoList = styled.ul`
   list-style-type: none;
@@ -117,6 +118,7 @@ const DinoDetailsCard = ({
     <CardBody>
       <FeatureImageContainer>
         <DinoImage className="main" src={image} alt={name} />
+        <PeriodGraph period={period} />
       </FeatureImageContainer>
       <InfoList>
         {name && (
