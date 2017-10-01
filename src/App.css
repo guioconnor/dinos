@@ -1,3 +1,14 @@
+/* 
+Basic pallette
+
+Base+2 : #536F6F
+Base+1 : #3B5555
+Base   : #223333
+Base-1 : #153030
+Base-2 : #0A2626
+
+*/
+
 .App {
   text-align: center;
   padding: 20px 0 40px 0;

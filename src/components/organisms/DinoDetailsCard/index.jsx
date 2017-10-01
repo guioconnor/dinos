@@ -3,6 +3,7 @@ import styled from "styled-components";
 import DinoImage from "../../atoms/DinoImage";
 import DietIcon from "../../atoms/DietIcon";
 import HabitatIcon from "../../atoms/HabitatIcon";
+import Icon from "../../atoms/Icon";
 
 const InfoList = styled.ul`
   list-style-type: none;
@@ -125,7 +126,11 @@ const DinoDetailsCard = ({
         )}
         {pronunciation && (
           <InfoItem>
-            <span>Pronunciation</span> <span>{pronunciation}</span>
+            <span>Pronunciation</span>
+            <IconContainer>
+              <Icon type="pronunciation" />
+            </IconContainer>
+            <span>{pronunciation}</span>
           </InfoItem>
         )}
         {meaningOfName && (
@@ -153,12 +158,20 @@ const DinoDetailsCard = ({
         )}
         {length && (
           <InfoItem>
-            <span>Length</span> <span>{length}</span>
+            <span>Length</span>
+            <IconContainer>
+              <Icon type="length" />
+            </IconContainer>
+            <span>{length}</span>
           </InfoItem>
         )}
         {period && (
           <InfoItem>
-            <span>Period</span> <span>{period}</span>
+            <span>Period</span>
+            <IconContainer>
+              <Icon type="period" />
+            </IconContainer>
+            <span>{period}</span>
           </InfoItem>
         )}
         {mya && (
@@ -168,7 +181,11 @@ const DinoDetailsCard = ({
         )}
         {info && (
           <InfoItem>
-            <span>Info</span> <span>{info}</span>
+            <span>Info</span>
+            <IconContainer>
+              <Icon type="info" />
+            </IconContainer>
+            <span>{info}</span>
           </InfoItem>
         )}
       </InfoList>
