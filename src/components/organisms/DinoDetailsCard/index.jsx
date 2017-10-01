@@ -14,11 +14,15 @@ const InfoList = styled.ul`
 
 const InfoItem = styled.li`
   padding: 30px 20px 15px 80px;
-  margin: 2px 0;
+  margin: 0 0 1px 0;
   background: #4f5c5c;
   text-align: left;
   position: relative;
   line-height: 1.5;
+
+  &:hover {
+    background: #576464;
+  }
 
   & > span:first-child {
     position: absolute;
@@ -68,10 +72,17 @@ const CardBody = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
+  background: #3f4c4c;
+  max-width: 700px;
+  margin: 20px auto;
+  border-radius: 5px;
 
   @media (min-width: 768px) {
     flex-direction: row;
     align-items: flex-start;
+    max-width: none;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 `;
 

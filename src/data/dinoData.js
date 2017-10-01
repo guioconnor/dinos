@@ -5,21 +5,21 @@ const dinoData = [
     image: Silhouettes.allosaurus,
     name: "Allosaurus",
     pronunciation: "AL-oh-sore-us",
-    meaningOfName: "other lizard",
-    diet: "carnivore",
+    meaningOfName: "Other lizard",
+    diet: "Carnivore",
     length: "12m",
     period: "Late Jurassic",
     mya: "156-144",
-    habitat: "land",
+    habitat: "Land",
     info:
       "Allosaurus was an apex predator in the Late Jurassic in North America."
   },
   {
     // "image": apatosaurus,
     name: "Apatosaurus",
-    pronunciation: "ah-PAT-oh-sore-us",
-    meaningOfName: "deceptive lizard",
-    diet: "herbivore",
+    pronunciation: "Ah-PAT-oh-sore-us",
+    meaningOfName: "Deceptive lizard",
+    diet: "Herbivore",
     length: "21m",
     period: "Late Jurassic",
     mya: "154-145",
@@ -31,20 +31,20 @@ const dinoData = [
     name: "Brachiosaurus",
     pronunciation: "BRAK-ee-oh-sore-us",
     meaningOfName: "Arm lizard",
-    diet: "herbivore",
+    diet: "Herbivore",
     length: "30m",
     period: "Late Jurassic",
     mya: "155-140",
-    habitat: "land",
+    habitat: "Land",
     info:
       "Brachiosaurus was a large, North American sauropod dinosaur with an arch encircling its nasal opening."
   },
   {
     // "image": compsognathus,
     name: "Compsognathus",
-    pronunciation: "komp-sog-NATH-us",
-    meaningOfName: "pretty jaw",
-    diet: "carnivore",
+    pronunciation: "Komp-sog-NATH-us",
+    meaningOfName: "Pretty jaw",
+    diet: "Carnivore",
     length: "0.65m",
     period: "Late Jurassic",
     mya: "145-140",
@@ -54,9 +54,9 @@ const dinoData = [
   {
     // "image": dracorex,
     name: "Dracorex",
-    pronunciation: "dray-ko-rex",
-    meaningOfName: "dragon king",
-    diet: "herbivore",
+    pronunciation: "Dray-ko-rex",
+    meaningOfName: "Dragon king",
+    diet: "Herbivore",
     length: "estimated 4m",
     period: "Late Cretaceous",
     mya: "66",
@@ -66,35 +66,35 @@ const dinoData = [
   {
     image: Silhouettes.elasmosaurus,
     name: "Elasmosaurus",
-    pronunciation: "ee-LAZ-mo-sore-us",
-    meaningOfName: "thin plate lizard",
-    diet: "carnivore",
+    pronunciation: "Ee-LAZ-mo-sore-us",
+    meaningOfName: "Thin plate lizard",
+    diet: "Carnivore",
     length: "14m",
     period: "Late Cretaceous",
     mya: "80.5",
-    habitat: "sea",
+    habitat: "Sea",
     info:
       "Elasmosaurus was an aquatic dinosaur with an extremely long neck that likely fed on other smaller aquatic fauna like fish, molluscs, and squid. E.D. Cope mistakenly placed the skull of an Elasmosaurus on the much shorter tail rather than the extremely long neck."
   },
   {
     image: Silhouettes.giraffatitan,
     name: "Giraffatitan",
-    pronunciation: "ji-raf-e-tie-tan",
-    meaningOfName: "giraffe titan",
-    diet: "herbivore",
+    pronunciation: "Ji-raf-e-tie-tan",
+    meaningOfName: "Giraffe titan",
+    diet: "Herbivore",
     length: "23m",
     period: "Late Jurassic",
     mya: "154-142",
-    habitat: "land",
+    habitat: "Land",
     info:
       "Giraffatitan was a large sauropod related to Brachiosaurus with huge nostrils and nasal openings in its skull."
   },
   {
     // "image": indosuchus,
     name: "Indosuchus",
-    pronunciation: "in-doh-sook-us",
+    pronunciation: "In-doh-sook-us",
     meaningOfName: "Indian crocodile",
-    diet: "carnivore",
+    diet: "Carnivore",
     length: "7m",
     period: "Late Cretaceous",
     mya: "70-66",
@@ -103,9 +103,9 @@ const dinoData = [
   {
     // "image": jingshanosaurus,
     name: "Jingshanosaurus",
-    pronunciation: "jing-shahn-oh-sore-us",
+    pronunciation: "Jing-shahn-oh-sore-us",
     meaningOfName: "Jingshan lizard",
-    diet: "herbivore",
+    diet: "Herbivore",
     length: "5m",
     period: "Early Jurassic",
     mya: "205-190",
@@ -115,9 +115,9 @@ const dinoData = [
   {
     // "image": khaan,
     name: "Khaan",
-    pronunciation: "kahn",
-    meaningOfName: "ruler",
-    diet: "omnivore",
+    pronunciation: "Kahn",
+    meaningOfName: "Ruler",
+    diet: "Omnivore",
     length: "1.8m",
     period: "Late Cretaceous",
     mya: "81-75",
@@ -127,9 +127,9 @@ const dinoData = [
   {
     // "image": minmi,
     name: "Minmi",
-    pronunciation: "min-mie",
+    pronunciation: "Min-mie",
     meaningOfName: "Minmi Crossing, Queensland, Australia",
-    diet: "herbivore",
+    diet: "Herbivore",
     length: "3m",
     period: "Early Cretaceous",
     mya: "121-112",
@@ -139,9 +139,9 @@ const dinoData = [
   {
     // "image": ouranosaurus,
     name: "Ouranosaurus",
-    pronunciation: "oo-RAH-noh-sore-us",
-    meaningOfName: "brave monitor lizard",
-    diet: "herbivore",
+    pronunciation: "Oo-RAH-noh-sore-us",
+    meaningOfName: "Brave monitor lizard",
+    diet: "Herbivore",
     length: "7m",
     period: "Early Cretaceous",
     mya: "125-112",
@@ -152,8 +152,8 @@ const dinoData = [
     // "image": parasaurolophus,
     name: "Parasaurolophus",
     pronunciation: "PARR-eh-saw-ROL-off-us / PARR-eh-sawr-eh-LOH-fus",
-    meaningOfName: "near crested lizard",
-    diet: "herbivore",
+    meaningOfName: "Near crested lizard",
+    diet: "Herbivore",
     length: "11m",
     period: "Late Cretaceous",
     mya: "76-74",
@@ -164,26 +164,26 @@ const dinoData = [
     image: Silhouettes.spinosaurus,
     name: "Spinosaurus",
     pronunciation: "SPINE-oh-SORE-us",
-    meaningOfName: "spine lizard",
-    diet: "carnivore",
+    meaningOfName: "Spine lizard",
+    diet: "Carnivore",
     length: "18m",
     period: "Early Cretaceous",
     mya: "112-97",
-    habitat: "land",
+    habitat: "Land",
     info:
       "Spinosaurus was one of the largest carnivore dinosaurs to walk the Earth. Its diet consisted mostly of fish and the large spines on its back likely formed a sail."
   },
   {
     image: Silhouettes.tyrannosaurusRex,
     name: "Tyrannosaurus",
-    pronunciation: "tie-RAN-oh-sore-us",
-    meaningOfName: "tyrant lizard",
-    diet: "carnivore",
+    pronunciation: "Tie-RAN-oh-sore-us",
+    meaningOfName: "Tyrant lizard",
+    diet: "Carnivore",
     length: "12m",
     period: "Late Cretaceous",
     mya: "68-66",
     legCount: 2,
-    habitat: "land",
+    habitat: "Land",
     info:
       "Tyrannosaurus is well-represented in both fiction and history with over 50 specimens discovered. It and was one of the last non-avian dinosaurs to exist before the extinction event. Tyrannosaurus had a massive skull and a long heavy tail."
   },
@@ -192,7 +192,7 @@ const dinoData = [
     name: "Utahraptor",
     pronunciation: "YOO-tah-RAP-tor",
     meaningOfName: "Utah predator",
-    diet: "carnivore",
+    diet: "Carnivore",
     length: "6m",
     period: "Early Cretaceous",
     mya: "112-100",
@@ -202,9 +202,9 @@ const dinoData = [
   {
     // "image": vulcanodon,
     name: "Vulcanodon",
-    pronunciation: "vul-ka-oh-don",
-    meaningOfName: "vulcano tooth",
-    diet: "herbivore",
+    pronunciation: "Vul-ka-oh-don",
+    meaningOfName: "Vulcano tooth",
+    diet: "Herbivore",
     length: "6.5m",
     period: "Early Jurassic",
     mya: "183-175",
@@ -215,7 +215,7 @@ const dinoData = [
     name: "Xenoceratops",
     pronunciation: "ZEE-no-SEH-ruh-tops",
     meaningOfName: "Alien horned face",
-    diet: "herbivore",
+    diet: "Herbivore",
     length: "6m",
     period: "Early Cretaceous",
     mya: "78.5-77.5",
@@ -227,7 +227,7 @@ const dinoData = [
     name: "Zephyrosaurus",
     pronunciation: "ZEF-ear-ro-SORE-us",
     meaningOfName: "West wind lizard",
-    diet: "herbivore",
+    diet: "Herbivore",
     length: "1.8m",
     period: "Early Cretaceous",
     mya: "120-110",
@@ -237,223 +237,223 @@ const dinoData = [
   {
     image: Silhouettes.abelisaurus,
     name: "Abelisaurus",
-    habitat: "land",
-    diet: "carnivore"
+    habitat: "Land",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.camarosaurus,
     name: "Camarosaurus",
     legCount: 4,
-    habitat: "land",
-    diet: "herbivore"
+    habitat: "Land",
+    diet: "Herbivore"
   },
   {
     image: Silhouettes.claosaurus,
     name: "Claosaurus",
-    habitat: "land",
-    diet: "herbivore"
+    habitat: "Land",
+    diet: "Herbivore"
   },
   {
     image: Silhouettes.eromangasaurus,
     name: "Eromangasaurus",
-    habitat: "sea"
+    habitat: "Sea"
   },
   {
     image: Silhouettes.mamenchisaurus,
     name: "Mamenchisaurus",
-    habitat: "land",
-    diet: "herbivore"
+    habitat: "Land",
+    diet: "Herbivore"
   },
   {
     image: Silhouettes.aerosteon,
     name: "Aerosteon",
-    habitat: "land",
-    diet: "carnivore"
+    habitat: "Land",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.camptosaurus,
     name: "Camptosaurus",
-    habitat: "land",
-    diet: "herbivore"
+    habitat: "Land",
+    diet: "Herbivore"
   },
   {
     image: Silhouettes.daspletosaurus,
     name: "Daspletosaurus",
-    habitat: "land",
-    diet: "carnivore"
+    habitat: "Land",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.gigantoraptor,
     name: "Gigantoraptor",
-    habitat: "land",
-    diet: "carnivore"
+    habitat: "Land",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.mapusaurus,
     name: "Mapusaurus",
-    habitat: "land",
-    diet: "carnivore"
+    habitat: "Land",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.albertosaurus,
     name: "Albertosaurus",
-    habitat: "land",
-    diet: "carnivore"
+    habitat: "Land",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.carcharodontosaurus,
     name: "Carcharodontosaurus",
-    habitat: "land",
-    diet: "carnivore"
+    habitat: "Land",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.deinonychus,
     name: "Deinonychus",
-    habitat: "land",
-    diet: "carnivore"
+    habitat: "Land",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.massospondylus,
     name: "Massospondylus",
-    habitat: "land",
-    diet: "herbivore"
+    habitat: "Land",
+    diet: "Herbivore"
   },
   {
     image: Silhouettes.caudipteryx,
     name: "Caudipteryx",
-    habitat: "land",
-    diet: "carnivore"
+    habitat: "Land",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.dilong,
     name: "Dilong",
-    habitat: "land",
-    diet: "carnivore"
+    habitat: "Land",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.iguanodon,
     name: "Iguanodon",
-    habitat: "land",
-    diet: "herbivore"
+    habitat: "Land",
+    diet: "Herbivore"
   },
   {
     image: Silhouettes.megalosaurus,
     name: "Megalosaurus",
-    habitat: "land",
-    diet: "carnivore"
+    habitat: "Land",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.velociraptor,
     name: "Velociraptor",
-    habitat: "land",
-    diet: "carnivore"
+    habitat: "Land",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.archaeopteryx,
     name: "Archaeopteryx",
-    habitat: "land",
-    diet: "carnivore"
+    habitat: "Land",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.centrosaurus,
     name: "Centrosaurus",
-    habitat: "land",
-    diet: "herbivore"
+    habitat: "Land",
+    diet: "Herbivore"
   },
   {
     image: Silhouettes.diplodocus,
     name: "Diplodocus",
-    habitat: "land",
-    diet: "carnivore"
+    habitat: "Land",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.irritator,
     name: "Irritator",
-    habitat: "land",
-    diet: "carnivore"
+    habitat: "Land",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.microraptor,
     name: "Microraptor",
-    habitat: "sky",
-    diet: "carnivore"
+    habitat: "Sky",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.argentinosaurus,
     name: "Argentinosaurus",
-    habitat: "land",
-    diet: "herbivore"
+    habitat: "Land",
+    diet: "Herbivore"
   },
   {
     image: Silhouettes.cetiosaurus,
     name: "Cetiosaurus",
-    habitat: "land",
-    diet: "herbivore"
+    habitat: "Land",
+    diet: "Herbivore"
   },
   {
     image: Silhouettes.edmontosaurus,
     name: "Edmontosaurus",
-    habitat: "land",
-    diet: "herbivore"
+    habitat: "Land",
+    diet: "Herbivore"
   },
   {
     image: Silhouettes.leyesaurus,
     name: "Leyesaurus",
-    habitat: "land"
+    habitat: "Land"
   },
   {
     image: Silhouettes.monoclonius,
     name: "Monoclonius",
-    habitat: "land",
-    diet: "herbivore"
+    habitat: "Land",
+    diet: "Herbivore"
   },
   {
     image: Silhouettes.baryonyx,
     name: "Baryonyx",
-    habitat: "land",
-    diet: "carnivore"
+    habitat: "Land",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.chasmosaurus,
     name: "Chasmosaurus",
-    habitat: "land",
-    diet: "herbivore"
+    habitat: "Land",
+    diet: "Herbivore"
   },
   {
     image: Silhouettes.magyarosaurus,
     name: "Magyarosaurus",
-    habitat: "land",
-    diet: "herbivore"
+    habitat: "Land",
+    diet: "Herbivore"
   },
   {
     image: Silhouettes.plateosaurus,
     name: "Plateosaurus",
-    habitat: "land",
-    diet: "herbivore"
+    habitat: "Land",
+    diet: "Herbivore"
   },
   {
     image: Silhouettes.citipati,
     name: "Citipati",
-    habitat: "land",
-    diet: "omnivore"
+    habitat: "Land",
+    diet: "Omnivore"
   },
   {
     image: Silhouettes.epidexipteryx,
     name: "Epidexipteryx",
-    habitat: "land",
-    diet: "carnivore"
+    habitat: "Land",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.majungasaurus,
     name: "Majungasaurus",
-    habitat: "land",
-    diet: "carnivore"
+    habitat: "Land",
+    diet: "Carnivore"
   },
   {
     image: Silhouettes.pterodactyl,
     name: "Pterodactyl",
-    habitat: "sky",
-    diet: "carnivore"
+    habitat: "Sky",
+    diet: "Carnivore"
   }
 ];
 

@@ -8,11 +8,11 @@ const Container = styled.span`
 
 const DietIcon = ({ diet }) => {
   switch (diet) {
-    case "carnivore":
+    case "Carnivore":
       return <Container role="img">🍖</Container>;
-    case "herbivore":
+    case "Herbivore":
       return <Container role="img">🌿</Container>;
-    case "omnivore":
+    case "Omnivore":
       return <Container role="img">🍖🌿</Container>;
     default:
       return <Container role="img" />;

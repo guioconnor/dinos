@@ -8,13 +8,13 @@ const Container = styled.span`
 
 const HabitatIcon = ({ habitat }) => {
   switch (habitat) {
-    case "sea":
+    case "Sea":
       return <Container role="img">🌊</Container>;
-    case "freshwater":
+    case "Freshwater":
       return <Container role="img">🚰</Container>;
-    case "land":
+    case "Land":
       return <Container role="img">⛰️</Container>;
-    case "sky":
+    case "Sky":
       return <Container role="img">☁️</Container>;
     default:
       return <Container role="img" />;
