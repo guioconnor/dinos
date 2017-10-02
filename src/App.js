@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 
 import { createStore } from "redux";
 import { Provider } from "react-redux";
@@ -48,19 +48,21 @@ const App = () => (
     <Router>
       <div>
         <Navigation />
-        <Route exact path="/dinos" component={DinoGrid} />
-        <Route
-          exact
-          path="/dino/:dinoName"
-          render={({ match }) => (
-            <DinoDetailsCard
-              dino={
-                dinoData.filter(dino => dino.name === match.params.dinoName)[0]
-              }
-            />
-          )}
-        />
-        <Route path="/dinos/memory" component={MemoryGame} />
+        <Switch>
+          <Route exact path="/dinos" component={DinoGrid} />
+          <Route exact path="/dinos/memory" component={MemoryGame} />
+          <Route
+            exact
+            path="/dinos/:dinoName"
+            render={({ match }) => (
+              <DinoDetailsCard
+                dino={
+                  dinoData.filter(dino => dino.name === match.params.dinoName)[0]
+                }
+              />
+            )}
+          />
+        </Switch>
       </div>
     </Router>
   </Provider>
