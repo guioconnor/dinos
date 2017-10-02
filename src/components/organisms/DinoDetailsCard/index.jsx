@@ -76,7 +76,7 @@ const CardBody = styled.div`
   padding: 20px;
   background: #3f4c4c;
   max-width: 700px;
-  min-width: 400px;
+  min-width: 250px;
   margin: 20px auto;
   border-radius: 5px;
 
@@ -103,98 +103,98 @@ const IconContainer = styled.span`
 const DinoDetailsCard = ({
   dino: {
     name,
-    image,
-    pronunciation,
-    meaningOfName,
-    diet,
-    habitat,
-    length,
-    period,
-    mya,
-    info
+  image,
+  pronunciation,
+  meaningOfName,
+  diet,
+  habitat,
+  length,
+  period,
+  mya,
+  info
   }
 }) => (
-  <div className="App">
-    <H1>{name}</H1>
-    <CardBody>
-      <FeatureImageContainer>
-        <DinoImage className="main" src={image} alt={name} />
-        <PeriodGraph mya={mya} />
-      </FeatureImageContainer>
-      <InfoList>
-        {name && (
-          <InfoItem>
-            <span>Name</span> <span>{name}</span>
-          </InfoItem>
-        )}
-        {pronunciation && (
-          <InfoItem>
-            <span>Pronunciation</span>
-            <IconContainer>
-              <Icon type="pronunciation" />
-            </IconContainer>
-            <span>{pronunciation}</span>
-          </InfoItem>
-        )}
-        {meaningOfName && (
-          <InfoItem>
-            <span>Meaning Of Name</span> <span>{meaningOfName}</span>
-          </InfoItem>
-        )}
-        {diet && (
-          <InfoItem>
-            <span>Diet</span>
-            <IconContainer>
-              <DietIcon diet={diet} />
-            </IconContainer>
-            <span>{diet}</span>
-          </InfoItem>
-        )}
-        {habitat && (
-          <InfoItem>
-            <span>Habitat</span>
-            <IconContainer>
-              <HabitatIcon habitat={habitat} />
-            </IconContainer>
-            <span>{habitat}</span>
-          </InfoItem>
-        )}
-        {length && (
-          <InfoItem>
-            <span>Length</span>
-            <IconContainer>
-              <Icon type="length" />
-            </IconContainer>
-            <span>{length}</span>
-          </InfoItem>
-        )}
-        {period && (
-          <InfoItem>
-            <span>Period</span>
-            <IconContainer>
-              <Icon type="period" />
-            </IconContainer>
-            <span>{period}</span>
-          </InfoItem>
-        )}
-        {mya &&
-        mya.length && (
-          <InfoItem>
-            <span>Mya</span> <span>{mya.join(" - ")}</span>
-          </InfoItem>
-        )}
-        {info && (
-          <InfoItem>
-            <span>Info</span>
-            <IconContainer>
-              <Icon type="info" />
-            </IconContainer>
-            <span>{info}</span>
-          </InfoItem>
-        )}
-      </InfoList>
-    </CardBody>
-  </div>
-);
+    <div className="App">
+      <H1>{name}</H1>
+      <CardBody>
+        <FeatureImageContainer>
+          <DinoImage className="main" src={image} alt={name} />
+          <PeriodGraph mya={mya} />
+        </FeatureImageContainer>
+        <InfoList>
+          {name && (
+            <InfoItem>
+              <span>Name</span> <span>{name}</span>
+            </InfoItem>
+          )}
+          {pronunciation && (
+            <InfoItem>
+              <span>Pronunciation</span>
+              <IconContainer>
+                <Icon type="pronunciation" />
+              </IconContainer>
+              <span>{pronunciation}</span>
+            </InfoItem>
+          )}
+          {meaningOfName && (
+            <InfoItem>
+              <span>Meaning Of Name</span> <span>{meaningOfName}</span>
+            </InfoItem>
+          )}
+          {diet && (
+            <InfoItem>
+              <span>Diet</span>
+              <IconContainer>
+                <DietIcon diet={diet} />
+              </IconContainer>
+              <span>{diet}</span>
+            </InfoItem>
+          )}
+          {habitat && (
+            <InfoItem>
+              <span>Habitat</span>
+              <IconContainer>
+                <HabitatIcon habitat={habitat} />
+              </IconContainer>
+              <span>{habitat}</span>
+            </InfoItem>
+          )}
+          {length && (
+            <InfoItem>
+              <span>Length</span>
+              <IconContainer>
+                <Icon type="length" />
+              </IconContainer>
+              <span>{length}</span>
+            </InfoItem>
+          )}
+          {period && (
+            <InfoItem>
+              <span>Period</span>
+              <IconContainer>
+                <Icon type="period" />
+              </IconContainer>
+              <span>{period}</span>
+            </InfoItem>
+          )}
+          {mya &&
+            mya.length && (
+              <InfoItem>
+                <span>Mya</span> <span>{mya.join(" - ")}</span>
+              </InfoItem>
+            )}
+          {info && (
+            <InfoItem>
+              <span>Info</span>
+              <IconContainer>
+                <Icon type="info" />
+              </IconContainer>
+              <span>{info}</span>
+            </InfoItem>
+          )}
+        </InfoList>
+      </CardBody>
+    </div>
+  );
 
 export default DinoDetailsCard;

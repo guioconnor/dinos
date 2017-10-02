@@ -26,7 +26,12 @@ const Container = styled.ul`
   justify-content: center;
 `;
 
-const GridItem = styled.li`margin: 20px;`;
+const GridItem = styled.li`
+  margin: 10px;
+  width: calc(50vw - 30px);
+  max-width: 250px;
+  min-width: 150px;
+`;
 
 const StyledDinoLink = styled(DinoLink) `
   display: block;
