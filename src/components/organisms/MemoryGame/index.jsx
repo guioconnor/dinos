@@ -7,10 +7,12 @@ import { randomise } from "../../../lib/arrayHelpers";
 
 const Grid = styled.div`
   display: grid;
-  max-width: 790px;
-  margin: 30px auto;
-  grid-template-columns: 24.7% 24.7% 24.7% 24.7%;
-  grid-gap: 25px 0.3%;
+  width: calc(86vmin - 56px);
+  height: calc(86vmin - 56px);
+  margin: 7vmin auto 0 auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 2vmin 2vmin;
   grid-auto-rows: minmax(100px, auto);
   user-select: none;
 
@@ -19,11 +21,15 @@ const Grid = styled.div`
   }
 `;
 
+const MemoryButton = styled(PlainButton) `
+  width: 100%;
+  height: 100%;
+`;
+
 class MemoryGame extends React.Component {
   constructor(props) {
     super(props);
     this.boardSize = 16;
-    this.pairsAttempted = 0;
     this.init();
   }
 
@@ -53,7 +59,6 @@ class MemoryGame extends React.Component {
     const turnedCardsCount = turnedCards.length;
 
     if (turnedCardsCount === 2) {
-      this.pairsAttempted++;
       setTimeout(() => {
         this.checkMatch();
       }, 100);
@@ -102,22 +107,18 @@ class MemoryGame extends React.Component {
           {cards.map(dino => {
             const { image, name, id, turned, found } = dino;
             return (
-              <PlainButton onClick={() => this.onClick(id)}>
+              <MemoryButton onClick={() => this.onClick(id)}>
                 {found ? (
-                  <DinoCard dino={dino} width={150} opacity={0.2} />
+                  <DinoCard dino={dino} opacity={0.2} />
                 ) : turned ? (
-                  <DinoCard dino={dino} width={150} />
+                  <DinoCard dino={dino} />
                 ) : (
-                  <DinoCard dino={dino} width={150} displayImage={false} />
-                )}
-              </PlainButton>
+                      <DinoCard dino={dino} displayImage={false} />
+                    )}
+              </MemoryButton>
             );
           })}
         </Grid>
-        <span>
-          {this.pairsAttempted} attempts of{" "}
-          {this.boardSize * (this.boardSize - 1)} possible pairs
-        </span>
       </div>
     );
   }

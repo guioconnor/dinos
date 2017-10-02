@@ -6,9 +6,9 @@ import Filter from "../../../containers/FilterContainer";
 
 const dietFilterValues = [
   { value: null, name: "All Diets" },
-  { value: "carnivore", name: "Carnivore" },
-  { value: "herbivore", name: "Herbivore" },
-  { value: "omnivore", name: "Omnivore" }
+  { value: "Carnivore", name: "Carnivore" },
+  { value: "Herbivore", name: "Herbivore" },
+  { value: "Omnivore", name: "Omnivore" }
 ];
 
 const periodFilterValues = [
@@ -28,7 +28,7 @@ const Container = styled.ul`
 
 const GridItem = styled.li`margin: 20px;`;
 
-const StyledDinoLink = styled(DinoLink)`
+const StyledDinoLink = styled(DinoLink) `
   display: block;
   margin: 20px;
 `;
@@ -38,8 +38,6 @@ const H1 = styled.h1`font-size: 50px;`;
 const DinoGrid = ({ dinoData, mainIllustration }) => (
   <div className="App">
     <H1>Dinosaurs</H1>
-    <Filter filterName="diet" filterValues={dietFilterValues} />
-    <Filter filterName="period" filterValues={periodFilterValues} />
     <Container>
       {dinoData.map(dino => (
         <GridItem>
@@ -49,6 +47,8 @@ const DinoGrid = ({ dinoData, mainIllustration }) => (
         </GridItem>
       ))}
     </Container>
+    <Filter filterName="diet" filterValues={dietFilterValues} />
+    <Filter filterName="period" filterValues={periodFilterValues} />
   </div>
 );
 
