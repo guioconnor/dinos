@@ -6,14 +6,11 @@ import Roar, { playRoar } from "../../atoms/Roar";
 import { randomise } from "../../../lib/arrayHelpers";
 
 const Grid = styled.div`
-  display: grid;
-  width: calc(86vmin - 56px);
-  height: calc(86vmin - 56px);
-  margin: 7vmin auto 0 auto;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-gap: 2vmin 2vmin;
-  grid-auto-rows: minmax(100px, auto);
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(76vmin + 80px);
+  height: calc(76vmin + 80px);
+  margin: 0 auto 0 auto;
   user-select: none;
 
   & a {
@@ -22,8 +19,9 @@ const Grid = styled.div`
 `;
 
 const MemoryButton = styled(PlainButton) `
-  width: 100%;
-  height: 100%;
+  width: 19vmin;
+  height: 19vmin;
+  margin: 10px;
 `;
 
 class MemoryGame extends React.Component {
