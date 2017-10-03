@@ -28,9 +28,12 @@ const Container = styled.ul`
 
 const GridItem = styled.li`
   margin: 10px;
-  width: calc(50vw - 30px);
-  max-width: 250px;
+  max-width: 230px;
   min-width: 150px;
+
+  @media(max-width: 550px) {
+    width: calc(50vw - 30px);
+  }
 `;
 
 const StyledDinoLink = styled(DinoLink) `
