@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import DinoCard from "../DinoCard";
 import PlainButton from "../../atoms/PlainButton";
-import Roar, { playRoar } from "../../atoms/Roar";
+import Roar from "../../atoms/Roar";
 import { randomise } from "../../../lib/arrayHelpers";
 
 const Grid = styled.div`
@@ -71,7 +71,7 @@ class MemoryGame extends React.Component {
     if (cards[turnedCards[0]].name === cards[turnedCards[1]].name) {
       cards[turnedCards[0]].found = true;
       cards[turnedCards[1]].found = true;
-      playRoar();
+      this.roarElement.play();
     }
     cards[turnedCards[0]].turned = false;
     cards[turnedCards[1]].turned = false;
@@ -100,7 +100,7 @@ class MemoryGame extends React.Component {
     const { cards } = this.state;
     return (
       <div>
-        <Roar />
+        <Roar inputRef={el => this.roarElement = el} />
         <Grid>
           {cards.map(dino => {
             const { image, name, id, turned, found } = dino;

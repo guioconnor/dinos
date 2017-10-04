@@ -1,14 +1,9 @@
 import React from "react";
 
-export const playRoar = () => {
-  const roarPlayer = document.getElementById("roarplayer");
-  roarPlayer.play();
-};
-
-const Roar = () => (
-  <audio className="player" preload id="roarplayer">
+const Roar = ({ inputRef }) => (
+  <audio className="player" preload id="roarplayer" ref={inputRef} >
     <source src="https://raw.githubusercontent.com/guioconnor/dinos/master/src/components/atoms/Roar/TyrannosaurusRexRoar.mp3" />
-  </audio>
+  </audio >
 );
 
 export default Roar;
