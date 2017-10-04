@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
 import DietIcon from "../../atoms/DietIcon";
 import HabitatIcon from "../../atoms/HabitatIcon";
 import DinoImage from "../../atoms/DinoImage";
@@ -51,7 +50,7 @@ const DinoCard = ({
       {displayDetails && <H2>{dino.name}</H2>}
       {displayImage && (
         <ElementContainer>
-          <DinoImage src={dino.image} alt={dino.name} width={50} width={50} />
+          <DinoImage src={dino.image} alt={dino.name} width={50} height={50} />
         </ElementContainer>
       )}
       {displayDetails && (

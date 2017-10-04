@@ -66,7 +66,6 @@ class MemoryGame extends React.Component {
   checkMatch = () => {
     const cards = this.state.cards.slice();
     const turnedCards = cards.filter(c => c.turned).map(c => c.id);
-    const turnedCardsCount = turnedCards.length;
 
     if (cards[turnedCards[0]].name === cards[turnedCards[1]].name) {
       cards[turnedCards[0]].found = true;
@@ -103,7 +102,7 @@ class MemoryGame extends React.Component {
         <Roar inputRef={el => this.roarElement = el} />
         <Grid>
           {cards.map(dino => {
-            const { image, name, id, turned, found } = dino;
+            const { id, turned, found } = dino;
             return (
               <MemoryButton onClick={() => this.onClick(id)}>
                 {found ? (
