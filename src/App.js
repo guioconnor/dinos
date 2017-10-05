@@ -17,8 +17,9 @@ import "./App.css";
 
 // Initialize Google Analytics
 ReactGA.initialize('UA-107421412-1');
-const history = createHistory()
+ReactGA.pageview(window.location.pathname + window.location.search);
 
+const history = createHistory()
 history.listen((location, action) => {
   ReactGA.pageview(window.location.pathname + window.location.search);
 });
