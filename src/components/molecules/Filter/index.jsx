@@ -10,7 +10,7 @@ const List = styled.ul`
 `;
 const ListItem = styled.li`margin: 10px;`;
 
-const PeriodFilter = ({ setFilter, filterValues }) => {
+const Filter = ({ setFilter, filterValues }) => {
   const ListItems = filterValues.map(v => (
     <ListItem>
       <FilterButton onClick={setFilter} value={v.value}>
@@ -22,4 +22,4 @@ const PeriodFilter = ({ setFilter, filterValues }) => {
   return <List>{ListItems}</List>;
 };
 
-export default PeriodFilter;
+export default Filter;

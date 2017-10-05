@@ -1,5 +1,7 @@
 import React from "react";
-import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
+import { Switch, Router, Route } from "react-router-dom";
+import ReactGA from 'react-ga';
+import createHistory from 'history/createBrowserHistory'
 
 import { createStore } from "redux";
 import { Provider } from "react-redux";
@@ -12,6 +14,14 @@ import DinoDetailsCard from "./components/organisms/DinoDetailsCard";
 import Navigation from "./components/organisms/Navigation";
 
 import "./App.css";
+
+// Initialize Google Analytics
+ReactGA.initialize('UA-107421412-1');
+const history = createHistory()
+
+history.listen((location, action) => {
+  ReactGA.pageview(window.location.pathname + window.location.search);
+});
 
 const addLoggingToDispatch = store => {
   const next = store.dispatch;
@@ -45,7 +55,7 @@ store.dispatch = addLoggingToDispatch(store);
 
 const App = () => (
   <Provider store={store}>
-    <Router>
+    <Router history={history}>
       <div>
         <Navigation />
         <Switch>

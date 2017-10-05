@@ -1,6 +1,16 @@
 import { connect } from "react-redux";
+import ReactGA from 'react-ga';
 import { setFilter } from "../../redux";
 import Filter from "../../components/molecules/Filter";
+
+const LogFilterChange = (filterName, filter) => {
+  debugger;
+  ReactGA.event({
+    category: 'Filter',
+    action: filterName,
+    label: filter,
+  });
+}
 
 const mapStateToProps = (state, { filterValues }) => {
   return {
@@ -10,7 +20,10 @@ const mapStateToProps = (state, { filterValues }) => {
 
 const mapDispatchToProps = (dispatch, { filterName }) => {
   return {
-    setFilter: filter => dispatch(setFilter(filterName, filter))
+    setFilter: filter => {
+      LogFilterChange(filterName, filter)
+      dispatch(setFilter(filterName, filter))
+    }
   };
 };
 
