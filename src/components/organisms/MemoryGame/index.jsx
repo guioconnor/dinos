@@ -1,38 +1,11 @@
 import React from "react";
-import styled from "styled-components";
-import ReactGA from 'react-ga';
 import DinoCard from "../DinoCard";
-import PlainButton from "../../atoms/PlainButton";
 import Roar from "../../atoms/Roar";
 import { randomise } from "../../../lib/arrayHelpers";
+import { logFlipMemoryCard } from "../../../lib/analytics";
 
-const Grid = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: calc(76vmin + 80px);
-  height: calc(76vmin + 80px);
-  margin: 0 auto 0 auto;
-  user-select: none;
-
-  & a {
-    width: auto;
-  }
-`;
-
-const MemoryButton = styled(PlainButton) `
-  width: 19vmin;
-  height: 19vmin;
-  margin: 10px;
-`;
-
-const logFlipCard = (position) => {
-  ReactGA.event({
-    category: 'MemoryGame',
-    action: 'FlipCard',
-    value: position
-  });
-}
-
+import Grid from './Grid';
+import MemoryButton from './MemoryButton';
 
 class MemoryGame extends React.Component {
   constructor(props) {
@@ -96,7 +69,7 @@ class MemoryGame extends React.Component {
   };
 
   onClick = id => {
-    logFlipCard(id);
+    logFlipMemoryCard(id);
     const cards = this.state.cards.slice();
     let turnedCards = cards.filter(c => c.turned).map(c => c.id);
     let turnedCardsCount = turnedCards.length;

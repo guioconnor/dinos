@@ -1,6 +1,5 @@
 import React from "react";
 import { Switch, Router, Route } from "react-router-dom";
-import ReactGA from 'react-ga';
 import createHistory from 'history/createBrowserHistory'
 
 import { createStore } from "redux";
@@ -13,15 +12,17 @@ import MemoryGame from "./containers/MemoryGameContainer";
 import DinoDetailsCard from "./components/organisms/DinoDetailsCard";
 import Navigation from "./components/organisms/Navigation";
 
+import { initializeAnalitics, logPageView } from "./lib/analytics";
+
 import "./App.css";
 
 // Initialize Google Analytics
-ReactGA.initialize('UA-107421412-1');
-ReactGA.pageview(window.location.pathname + window.location.search);
+initializeAnalitics('UA-107421412-1');
+logPageView(window.location);
 
-const history = createHistory()
+const history = createHistory();
 history.listen((location, action) => {
-  ReactGA.pageview(window.location.pathname + window.location.search);
+  logPageView(window.location);
 });
 
 const addLoggingToDispatch = store => {
