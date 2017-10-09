@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import MemoryGame from "../../components/organisms/MemoryGame";
-import { getRandomDinos } from "../../redux/selectors.js";
+import { getRandomDinos } from "../../redux/modules/dinos/selectors.js";
 
 const mapStateToProps = (state, ownProps) => {
   return {

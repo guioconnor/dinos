@@ -9,7 +9,7 @@ import rootReducer from "./redux";
 import dinoData from "./data/dinoData.js";
 import DinoGrid from "./containers/DinoGridContainer";
 import MemoryGame from "./containers/MemoryGameContainer";
-import DinoDetailsCard from "./components/organisms/DinoDetailsCard";
+import DinoDetailsCard from "./containers/DinoDetailsCardContainer";
 import Navigation from "./components/organisms/Navigation";
 
 import { initializeAnalitics, logPageView } from "./lib/analytics";
@@ -47,7 +47,15 @@ const addLoggingToDispatch = store => {
 const store = createStore(
   rootReducer,
   {
-    dinos: dinoData.filter(dino => !!dino.image),
+    dinos: Object.keys(dinoData)
+      .filter(dinoId => !!dinoData[dinoId].image)
+      .map(dinoId => dinoData[dinoId])
+      .reduce((dinoData, dino) => {
+        return {
+          ...dinoData,
+          [dino.dinoId]: dino,
+        }
+      }, {}),
     filters: {}
   },
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
@@ -65,12 +73,10 @@ const App = () => (
           <Route exact path="/dinos/memory" component={MemoryGame} />
           <Route
             exact
-            path="/dinos/:dinoName"
+            path="/dinos/:dinoId"
             render={({ match }) => (
               <DinoDetailsCard
-                dino={
-                  dinoData.filter(dino => dino.name === match.params.dinoName)[0]
-                }
+                dinoId={match.params.dinoId}
               />
             )}
           />

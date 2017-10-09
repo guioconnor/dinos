@@ -5,10 +5,10 @@ import { logDinoLinkClick } from "../../../lib/analytics";
 
 let StyledDinoLink = styled(NavLink) `text-decoration: none;`;
 
-const DinoLink = ({ dinoName, children }) => (
+const DinoLink = ({ dinoId, children }) => (
   <StyledDinoLink
-    to={`/dinos/${dinoName}`}
-    onClick={() => logDinoLinkClick(dinoName)}
+    to={`/dinos/${dinoId}`}
+    onClick={() => logDinoLinkClick(dinoId)}
   >{children}</StyledDinoLink>
 );
 

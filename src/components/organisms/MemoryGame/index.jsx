@@ -1,7 +1,7 @@
 import React from "react";
 import DinoCard from "../DinoCard";
 import Roar from "../../atoms/Roar";
-import { randomise } from "../../../lib/arrayHelpers";
+import { shuffle } from 'lodash';
 import { logFlipMemoryCard } from "../../../lib/analytics";
 
 import Grid from './Grid';
@@ -19,7 +19,7 @@ class MemoryGame extends React.Component {
     const pairedDinos = randomDinos.concat(randomDinos);
 
     this.state = {
-      cards: randomise(pairedDinos).map((card, index) => {
+      cards: shuffle(pairedDinos).map((card, index) => {
         return {
           ...card,
           id: index,

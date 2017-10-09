@@ -102,7 +102,8 @@ const IconContainer = styled.span`
 
 const DinoDetailsCard = ({
   dino: {
-    name,
+  dinoId,
+  name,
   image,
   pronunciation,
   meaningOfName,

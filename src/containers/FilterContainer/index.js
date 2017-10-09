@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { setFilter } from "../../redux";
+import { setFilter } from "../../redux/modules/filters";
 import Filter from "../../components/molecules/Filter";
 import { logFllterChange } from "../../lib/analytics";
 
