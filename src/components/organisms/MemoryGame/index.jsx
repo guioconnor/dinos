@@ -7,6 +7,14 @@ import { logFlipMemoryCard } from "../../../lib/analytics";
 import Grid from './Grid';
 import MemoryButton from './MemoryButton';
 
+const isCardTurned = (turnedCards, cardId) => {
+  return turnedCards.includes(cardId);
+};
+
+const isCardFound = (foundCards, cardId) => {
+  return foundCards.includes(cardId);
+};
+
 class MemoryGame extends React.Component {
   constructor(props) {
     super(props);
@@ -17,81 +25,37 @@ class MemoryGame extends React.Component {
   init = () => {
     const randomDinos = this.props.getRandomDinos(this.boardSize / 2);
     const pairedDinos = randomDinos.concat(randomDinos);
+    const cards = shuffle(pairedDinos).map((card, index) => {
+      return {
+        ...card,
+        cardId: index,
+      };
+    })
 
-    this.state = {
-      cards: shuffle(pairedDinos).map((card, index) => {
-        return {
-          ...card,
-          id: index,
-          turned: false,
-          found: false
-        };
-      })
-    };
+    this.props.resetBoard(cards);
   };
 
-  turnCard = id => {
-    const cards = this.state.cards.slice();
-
-    cards[id].turned = true;
-    this.setState({ cards });
-
-    const turnedCards = cards.filter(c => c.turned).map(c => c.id);
-    const turnedCardsCount = turnedCards.length;
-
-    if (turnedCardsCount === 2) {
-      setTimeout(() => {
-        this.checkMatch();
-      }, 100);
-    }
-  };
-
-  checkMatch = () => {
-    const cards = this.state.cards.slice();
-    const turnedCards = cards.filter(c => c.turned).map(c => c.id);
-
-    if (cards[turnedCards[0]].name === cards[turnedCards[1]].name) {
-      cards[turnedCards[0]].found = true;
-      cards[turnedCards[1]].found = true;
-      this.roarElement.play();
-    }
-    cards[turnedCards[0]].turned = false;
-    cards[turnedCards[1]].turned = false;
-
-    setTimeout(() => {
-      this.setState({ cards });
-    }, 1000);
-
-    const foundCardsCount = cards.filter(c => c.found).map(c => c.id).length;
-    if (foundCardsCount === this.boardSize) {
-      setTimeout(() => this.init(), 1500);
-    }
-  };
-
-  onClick = id => {
-    logFlipMemoryCard(id);
-    const cards = this.state.cards.slice();
-    let turnedCards = cards.filter(c => c.turned).map(c => c.id);
-    let turnedCardsCount = turnedCards.length;
-
-    if (!cards[id].found && !cards[id].turned && turnedCardsCount < 2) {
-      this.turnCard(id);
-    }
-  };
 
   render() {
-    const { cards } = this.state;
+    const cards = this.props.board;
+    const { turnedCards, foundCards } = this.props;
+
+    const onClick = cardId => {
+      logFlipMemoryCard(cardId);
+      this.props.turnCard(cardId);
+    };
+
     return (
       <div>
         <Roar inputRef={el => this.roarElement = el} />
         <Grid>
           {cards.map(dino => {
-            const { id, turned, found } = dino;
+            const { cardId } = dino;
             return (
-              <MemoryButton onClick={() => this.onClick(id)}>
-                {found ? (
+              <MemoryButton onClick={() => onClick(cardId)}>
+                {isCardFound(foundCards, cardId) ? (
                   <DinoCard dino={dino} opacity={0.2} />
-                ) : turned ? (
+                ) : isCardTurned(turnedCards, cardId) ? (
                   <DinoCard dino={dino} />
                 ) : (
                       <DinoCard dino={dino} displayImage={false} />

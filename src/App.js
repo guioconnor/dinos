@@ -1,8 +1,9 @@
 import React from "react";
 import { Switch, Router, Route } from "react-router-dom";
 import createHistory from 'history/createBrowserHistory'
-
-import { createStore } from "redux";
+import { composeWithDevTools } from 'redux-devtools-extension';
+import { createStore, applyMiddleware, compose } from "redux";
+import thunk from 'redux-thunk';
 import { Provider } from "react-redux";
 import rootReducer from "./redux";
 
@@ -44,6 +45,10 @@ const addLoggingToDispatch = store => {
   };
 };
 
+const middleware = [
+  thunk,
+]
+
 const store = createStore(
   rootReducer,
   {
@@ -58,7 +63,7 @@ const store = createStore(
       }, {}),
     filters: {}
   },
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  composeWithDevTools(applyMiddleware(...middleware))
 );
 
 store.dispatch = addLoggingToDispatch(store);
