@@ -35,6 +35,11 @@ class MemoryGame extends React.Component {
     this.props.resetBoard(cards);
   };
 
+  componentWillUpdate(nextProps, nextState) {
+    if (nextProps.foundCards !== this.props.foundCards) {
+      this.roarElement.play();
+    }
+  }
 
   render() {
     const cards = this.props.board;
