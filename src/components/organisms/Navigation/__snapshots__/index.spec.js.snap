@@ -32,5 +32,16 @@ exports[`<Navigation /> should render correctly 1`] = `
   >
     Animals Memory game
   </NavLink>
+  <NavLink
+    activeClassName="active"
+    ariaCurrent="true"
+    to={
+      Object {
+        "pathname": "/birds/memory",
+      }
+    }
+  >
+    Birds Memory game
+  </NavLink>
 </styled.nav>
 `;

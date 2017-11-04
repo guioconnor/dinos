@@ -38,6 +38,9 @@ const Navigation = () => (
     <NavLink activeClassName="active" to={{ pathname: "/animals/memory" }}>
       Animals Memory game
     </NavLink>
+    <NavLink activeClassName="active" to={{ pathname: "/birds/memory" }}>
+      Birds Memory game
+    </NavLink>
   </Nav>
 );
 

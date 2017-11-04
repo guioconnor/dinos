@@ -9,10 +9,13 @@ import rootReducer from "./redux";
 
 import dinoData from "./data/dinoData.js";
 import animalsData from './data/animalsData';
+import birdsData from './data/birdsData';
 
 import DinoGrid from "./containers/DinoGridContainer";
 import DinoMemoryGame from "./containers/DinoMemoryGameContainer";
 import AnimalsMemoryGame from "./containers/AnimalsMemoryGameContainer";
+import BirdsMemoryGame from "./containers/BirdsMemoryGameContainer";
+
 import DinoDetailsCard from "./containers/DinoDetailsCardContainer";
 import Navigation from "./components/organisms/Navigation";
 
@@ -65,6 +68,7 @@ const store = createStore(
         }
       }, {}),
     animals: animalsData,
+    birds: birdsData,
     filters: {}
   },
   composeWithDevTools(applyMiddleware(...middleware))
@@ -81,6 +85,7 @@ const App = () => (
           <Route exact path="/dinos" component={DinoGrid} />
           <Route exact path="/dinos/memory" component={DinoMemoryGame} />
           <Route exact path="/animals/memory" component={AnimalsMemoryGame} />
+          <Route exact path="/birds/memory" component={BirdsMemoryGame} />
           <Route
             exact
             path="/dinos/:dinoId"
