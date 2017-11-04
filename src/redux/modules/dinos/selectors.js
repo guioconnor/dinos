@@ -2,7 +2,14 @@ import { shuffle, take, orderBy } from 'lodash';
 
 const getAllDinos = dinos =>
   Object.keys(dinos)
-    .map(dinoId => dinos[dinoId]);
+    .map(dinoId => dinos[dinoId])
+    .map(dino => {
+      return {
+        ...dino,
+        itemId: dino.dinoId,
+      }
+    })
+  ;
 
 const getAllDinosAlphabeticallySorted = dinos =>
   orderBy(getAllDinos(dinos), [dino => dino.name.toLowerCase()], ['asc']);

@@ -8,7 +8,7 @@ exports[`<Navigation /> should render correctly 1`] = `
     exact={true}
     to="/dinos"
   >
-    Home
+    Dinos
   </NavLink>
   <NavLink
     activeClassName="active"
@@ -19,18 +19,18 @@ exports[`<Navigation /> should render correctly 1`] = `
       }
     }
   >
-    Memory game
+    Dino Memory game
   </NavLink>
   <NavLink
     activeClassName="active"
     ariaCurrent="true"
     to={
       Object {
-        "pathname": "/contact",
+        "pathname": "/animals/memory",
       }
     }
   >
-    Contact
+    Animals Memory game
   </NavLink>
 </styled.nav>
 `;

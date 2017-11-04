@@ -23,9 +23,9 @@ class MemoryGame extends React.Component {
   }
 
   init = () => {
-    const randomDinos = this.props.getRandomDinos(this.boardSize / 2);
-    const pairedDinos = randomDinos.concat(randomDinos);
-    const cards = shuffle(pairedDinos).map((card, index) => {
+    const randomCards = this.props.getRandomCards(this.boardSize / 2);
+    const pairedCards = randomCards.concat(randomCards);
+    const cards = shuffle(pairedCards).map((card, index) => {
       return {
         ...card,
         cardId: index,
@@ -54,16 +54,16 @@ class MemoryGame extends React.Component {
       <div>
         <Roar inputRef={el => this.roarElement = el} />
         <Grid>
-          {cards.map(dino => {
-            const { cardId } = dino;
+          {cards.map(card => {
+            const { cardId } = card;
             return (
               <MemoryButton onClick={() => onClick(cardId)}>
                 {isCardFound(foundCards, cardId) ? (
-                  <DinoCard dino={dino} opacity={0.2} />
+                  <DinoCard dino={card} opacity={0.2} />
                 ) : isCardTurned(turnedCards, cardId) ? (
-                  <DinoCard dino={dino} />
+                  <DinoCard dino={card} />
                 ) : (
-                      <DinoCard dino={dino} displayImage={false} />
+                      <DinoCard dino={card} displayImage={false} />
                     )}
               </MemoryButton>
             );

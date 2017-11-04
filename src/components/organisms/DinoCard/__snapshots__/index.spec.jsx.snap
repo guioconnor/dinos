@@ -1,14 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DinoCard /> should render correctly 1`] = `
-<styled.div>
+<styled.div
+  opacity={1}
+  width={null}
+>
   <styled.div>
     <DinoImage
       alt="Dino name"
+      height={50}
       src="abelisaurus"
       width={50}
     />
   </styled.div>
-   
 </styled.div>
 `;

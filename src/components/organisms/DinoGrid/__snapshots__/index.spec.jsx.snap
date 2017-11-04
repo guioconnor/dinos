@@ -7,7 +7,48 @@ exports[`<DinoGrid /> With a non-empty data set should render a grid with dino c
   <styled.h1>
     Dinosaurs
   </styled.h1>
-  <Connect(PeriodFilter)
+  <styled.ul>
+    <styled.li>
+      <Styled(DinoLink)>
+        <DinoCard
+          dino={
+            Object {
+              "diet": "carnivorous",
+              "image": "Silhouettes.allosaurus",
+              "info": "Allosaurus was an apex predator in the Late Jurassic in North America.",
+              "length": "12m",
+              "meaningOfName": "other lizard",
+              "mya": "156-144",
+              "name": "Allosaurus",
+              "period": "Late Jurassic",
+              "pronunciation": "AL-oh-sore-us",
+            }
+          }
+          displayDetails={true}
+        />
+      </Styled(DinoLink)>
+    </styled.li>
+    <styled.li>
+      <Styled(DinoLink)>
+        <DinoCard
+          dino={
+            Object {
+              "diet": "herbivorous",
+              "info": "Named the 'deceptive lizard' because its skull was confused with those of other sauropods until 1909.",
+              "length": "21m",
+              "meaningOfName": "deceptive lizard",
+              "mya": "154-145",
+              "name": "Apatosaurus",
+              "period": "Late Jurassic",
+              "pronunciation": "ah-PAT-oh-sore-us",
+            }
+          }
+          displayDetails={true}
+        />
+      </Styled(DinoLink)>
+    </styled.li>
+  </styled.ul>
+  <Connect(Filter)
     filterName="diet"
     filterValues={
       Array [
@@ -17,20 +58,20 @@ exports[`<DinoGrid /> With a non-empty data set should render a grid with dino c
         },
         Object {
           "name": "Carnivore",
-          "value": "carnivore",
+          "value": "Carnivore",
         },
         Object {
           "name": "Herbivore",
-          "value": "herbivore",
+          "value": "Herbivore",
         },
         Object {
           "name": "Omnivore",
-          "value": "omnivore",
+          "value": "Omnivore",
         },
       ]
     }
   />
-  <Connect(PeriodFilter)
+  <Connect(Filter)
     filterName="period"
     filterValues={
       Array [
@@ -57,47 +98,6 @@ exports[`<DinoGrid /> With a non-empty data set should render a grid with dino c
       ]
     }
   />
-  <styled.div>
-    <Styled(DinoLink)
-      dinoName="Allosaurus"
-    >
-      <DinoCard
-        dino={
-          Object {
-            "diet": "carnivorous",
-            "image": "Silhouettes.allosaurus",
-            "info": "Allosaurus was an apex predator in the Late Jurassic in North America.",
-            "length": "12m",
-            "meaningOfName": "other lizard",
-            "mya": "156-144",
-            "name": "Allosaurus",
-            "period": "Late Jurassic",
-            "pronunciation": "AL-oh-sore-us",
-          }
-        }
-        displayDetails={true}
-      />
-    </Styled(DinoLink)>
-    <Styled(DinoLink)
-      dinoName="Apatosaurus"
-    >
-      <DinoCard
-        dino={
-          Object {
-            "diet": "herbivorous",
-            "info": "Named the 'deceptive lizard' because its skull was confused with those of other sauropods until 1909.",
-            "length": "21m",
-            "meaningOfName": "deceptive lizard",
-            "mya": "154-145",
-            "name": "Apatosaurus",
-            "period": "Late Jurassic",
-            "pronunciation": "ah-PAT-oh-sore-us",
-          }
-        }
-        displayDetails={true}
-      />
-    </Styled(DinoLink)>
-  </styled.div>
 </div>
 `;
 
@@ -108,7 +108,8 @@ exports[`<DinoGrid /> With an empty data set should render an empty grid 1`] = `
   <styled.h1>
     Dinosaurs
   </styled.h1>
-  <Connect(PeriodFilter)
+  <styled.ul />
+  <Connect(Filter)
     filterName="diet"
     filterValues={
       Array [
@@ -118,20 +119,20 @@ exports[`<DinoGrid /> With an empty data set should render an empty grid 1`] = `
         },
         Object {
           "name": "Carnivore",
-          "value": "carnivore",
+          "value": "Carnivore",
         },
         Object {
           "name": "Herbivore",
-          "value": "herbivore",
+          "value": "Herbivore",
         },
         Object {
           "name": "Omnivore",
-          "value": "omnivore",
+          "value": "Omnivore",
         },
       ]
     }
   />
-  <Connect(PeriodFilter)
+  <Connect(Filter)
     filterName="period"
     filterValues={
       Array [
@@ -158,6 +159,5 @@ exports[`<DinoGrid /> With an empty data set should render an empty grid 1`] = `
       ]
     }
   />
-  <styled.div />
 </div>
 `;

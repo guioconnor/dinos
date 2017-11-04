@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import MemoryGame from "../../components/organisms/MemoryGame";
-import { getRandomDinos } from "../../redux/modules/dinos/selectors.js";
+import { getRandomAnimals } from "../../redux/modules/animals/selectors.js";
 import {
   getBoard,
   getTurnedCards,
@@ -16,7 +16,7 @@ import {
 const mapStateToProps = (state, ownProps) => {
   return {
     ...ownProps,
-    getRandomCards: getRandomDinos(state.dinos),
+    getRandomCards: getRandomAnimals(state.animals),
     board: getBoard(state.memoryBoard),
     turnedCards: getTurnedCards(state.memoryBoard),
     foundCards: getFoundCards(state.memoryBoard),

@@ -31,14 +31,14 @@ const canTurnCard = (state, cardId) => {
 }
 
 const checkMatchFound = (cards, turnedCards) => {
-  const card1DinoId = get(cards[turnedCards[0]], 'dinoId', null);
-  const card2DinoId = get(cards[turnedCards[1]], 'dinoId', null);
+  const card1ItemId = get(cards[turnedCards[0]], 'itemId', null);
+  const card2ItemId = get(cards[turnedCards[1]], 'itemId', null);
 
-  if (!card1DinoId || !card2DinoId) {
+  if (!card1ItemId || !card2ItemId) {
     return false
   }
 
-  return (card1DinoId === card2DinoId);
+  return (card1ItemId === card2ItemId);
 }
 
 // actions

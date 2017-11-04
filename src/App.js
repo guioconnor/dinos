@@ -12,6 +12,7 @@ import animalsData from './data/animalsData';
 
 import DinoGrid from "./containers/DinoGridContainer";
 import DinoMemoryGame from "./containers/DinoMemoryGameContainer";
+import AnimalsMemoryGame from "./containers/AnimalsMemoryGameContainer";
 import DinoDetailsCard from "./containers/DinoDetailsCardContainer";
 import Navigation from "./components/organisms/Navigation";
 
@@ -79,6 +80,7 @@ const App = () => (
         <Switch>
           <Route exact path="/dinos" component={DinoGrid} />
           <Route exact path="/dinos/memory" component={DinoMemoryGame} />
+          <Route exact path="/animals/memory" component={AnimalsMemoryGame} />
           <Route
             exact
             path="/dinos/:dinoId"

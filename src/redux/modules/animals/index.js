@@ -1,5 +1,3 @@
-import { animalImageMiddleware } from '../../../assets/animalImage';
-
 const initialState = {};
 
 const reducer = (state = initialState, action) => {

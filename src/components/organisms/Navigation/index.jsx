@@ -30,10 +30,13 @@ const Nav = styled.nav`
 const Navigation = () => (
   <Nav>
     <NavLink exact activeClassName="active" to="/dinos">
-      Home
+      Dinos
     </NavLink>
     <NavLink activeClassName="active" to={{ pathname: "/dinos/memory" }}>
-      Memory game
+      Dino Memory game
+    </NavLink>
+    <NavLink activeClassName="active" to={{ pathname: "/animals/memory" }}>
+      Animals Memory game
     </NavLink>
   </Nav>
 );
