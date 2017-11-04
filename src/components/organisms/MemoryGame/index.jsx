@@ -16,6 +16,10 @@ const isCardFound = (foundCards, cardId) => {
 };
 
 class MemoryGame extends React.Component {
+  static defaultProps = {
+    silhouette: true,
+  }
+
   constructor(props) {
     super(props);
     this.boardSize = 16;
@@ -35,7 +39,7 @@ class MemoryGame extends React.Component {
         randomCards.map(card => {
           return {
             ...card,
-            silhouette: true,
+            silhouette: this.props.silhouette,
           }
         })
       );

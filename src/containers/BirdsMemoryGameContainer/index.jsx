@@ -20,6 +20,7 @@ const mapStateToProps = (state, ownProps) => {
     board: getBoard(state.memoryBoard),
     turnedCards: getTurnedCards(state.memoryBoard),
     foundCards: getFoundCards(state.memoryBoard),
+    silhouette: false,
   };
 };
 
