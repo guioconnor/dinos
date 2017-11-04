@@ -1,4 +1,4 @@
-import { animalImageMiddleware } from '../../assets/animalImage';
+import { animalImageMiddleware } from '../../../assets/animalImage';
 
 const initialState = {};
 
