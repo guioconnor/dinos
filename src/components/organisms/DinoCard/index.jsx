@@ -11,7 +11,7 @@ const CardWrapper = styled.div`
   opacity: ${props => `${props.opacity}`};
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background: rgba(255, 255, 255, .8);
   color: #333;
   padding: 10%;
   border-radius: 10px;
@@ -26,6 +26,9 @@ const CardWrapper = styled.div`
 const ElementContainer = styled.div`
   width: 100%;
   padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const Icons = styled.ul`

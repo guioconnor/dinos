@@ -144,11 +144,11 @@ const animalsData = {
   //   name: 'mouse',
   //   difficulty: 2,
   // },
-  // octopus: {
-  //   animalId: 'octopus',
-  //   name: 'octopus',
-  //   difficulty: 2,
-  // },
+  octopus: {
+    animalId: 'octopus',
+    name: 'octopus',
+    difficulty: 2,
+  },
   ostrich: {
     animalId: 'ostrich',
     food: 'plants',
