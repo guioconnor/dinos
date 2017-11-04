@@ -1,4 +1,4 @@
-import Silhouettes from "../components/atoms/Silhouettes/index.jsx";
+import Silhouettes from "../assets/dinoSilhouettes/index.jsx";
 
 const dinoData = {
   'allosaurus': {
