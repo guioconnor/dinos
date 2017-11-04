@@ -23,8 +23,22 @@ class MemoryGame extends React.Component {
   }
 
   init = () => {
-    const randomCards = this.props.getRandomCards(this.boardSize / 2);
-    const pairedCards = randomCards.concat(randomCards);
+    const randomCards =
+      this.props.getRandomCards(this.boardSize / 2).map(card => {
+        return {
+          ...card,
+          silhouette: false,
+        }
+      });
+    const pairedCards =
+      randomCards.concat(
+        randomCards.map(card => {
+          return {
+            ...card,
+            silhouette: true,
+          }
+        })
+      );
     const cards = shuffle(pairedCards).map((card, index) => {
       return {
         ...card,

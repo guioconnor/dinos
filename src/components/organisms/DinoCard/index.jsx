@@ -47,13 +47,13 @@ const DinoCard = ({
   displayDetails,
   displayImage = true,
   opacity = 1,
-  width = null
+  width = null,
 }) => (
     <CardWrapper width={width} opacity={opacity}>
       {displayDetails && <H2>{dino.name}</H2>}
       {displayImage && (
         <ElementContainer>
-          <DinoImage src={dino.image} alt={dino.name} width={50} height={50} />
+          <DinoImage src={dino.image} alt={dino.name} width={50} height={50} silhouette={dino.silhouette} />
         </ElementContainer>
       )}
       {displayDetails && (
