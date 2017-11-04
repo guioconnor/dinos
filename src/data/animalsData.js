@@ -1,10 +1,4 @@
 const animalsData = {
-  baby: {
-    animalId: 'baby',
-    food: 'milk',
-    name: 'baby',
-    difficulty: 2,
-  },
   bear: {
     animalId: 'bear',
     food: 'honey',
