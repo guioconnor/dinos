@@ -102,7 +102,7 @@ const IconContainer = styled.span`
 
 const DinoDetailsCard = ({
   dino: {
-  dinoId,
+  itemId,
   name,
   image,
   pronunciation,
@@ -120,7 +120,7 @@ const DinoDetailsCard = ({
       <CardBody>
         <FeatureImageContainer>
           <DinoImage className="main" src={image} alt={name} />
-          <PeriodGraph mya={mya} />
+          {mya && <PeriodGraph mya={mya} />}
         </FeatureImageContainer>
         <InfoList>
           {name && (

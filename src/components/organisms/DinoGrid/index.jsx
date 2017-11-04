@@ -43,13 +43,13 @@ const StyledDinoLink = styled(DinoLink) `
 
 const H1 = styled.h1`font-size: 50px;`;
 
-const DinoGrid = ({ dinoData }) => (
+const DinoGrid = ({ dinoData, prefix }) => (
   <div className="App">
     <H1>Dinosaurs</H1>
     <Container>
       {dinoData.map(dino => (
         <GridItem>
-          <StyledDinoLink dinoId={dino.dinoId}>
+          <StyledDinoLink dinoId={dino.itemId} prefix={prefix}>
             <DinoCard dino={dino} displayDetails />
           </StyledDinoLink>
         </GridItem>

@@ -13,6 +13,14 @@ exports[`<Navigation /> should render correctly 1`] = `
   <NavLink
     activeClassName="active"
     ariaCurrent="true"
+    exact={true}
+    to="/animals"
+  >
+    Animals
+  </NavLink>
+  <NavLink
+    activeClassName="active"
+    ariaCurrent="true"
     to={
       Object {
         "pathname": "/dinos/memory",

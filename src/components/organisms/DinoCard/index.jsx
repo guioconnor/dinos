@@ -63,7 +63,7 @@ const DinoCard = ({
             <HabitatIcon habitat={dino.habitat} />
           </Icons>
           <ElementContainer>
-            <PeriodGraph mya={dino.mya} simple />
+            {dino.mya && <PeriodGraph mya={dino.mya} simple />}
           </ElementContainer>
         </div>
       )}

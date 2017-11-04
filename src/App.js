@@ -12,11 +12,14 @@ import animalsData from './data/animalsData';
 import birdsData from './data/birdsData';
 
 import DinoGrid from "./containers/DinoGridContainer";
+import AnimalsGrid from "./containers/AnimalsGridContainer";
+
 import DinoMemoryGame from "./containers/DinoMemoryGameContainer";
 import AnimalsMemoryGame from "./containers/AnimalsMemoryGameContainer";
 import BirdsMemoryGame from "./containers/BirdsMemoryGameContainer";
 
 import DinoDetailsCard from "./containers/DinoDetailsCardContainer";
+import AnimalDetailsCard from "./containers/AnimalDetailsCardContainer";
 import Navigation from "./components/organisms/Navigation";
 
 import { initializeAnalitics, logPageView } from "./lib/analytics";
@@ -83,6 +86,7 @@ const App = () => (
         <Navigation />
         <Switch>
           <Route exact path="/dinos" component={DinoGrid} />
+          <Route exact path="/animals" component={AnimalsGrid} />
           <Route exact path="/dinos/memory" component={DinoMemoryGame} />
           <Route exact path="/animals/memory" component={AnimalsMemoryGame} />
           <Route exact path="/birds/memory" component={BirdsMemoryGame} />
@@ -92,6 +96,15 @@ const App = () => (
             render={({ match }) => (
               <DinoDetailsCard
                 dinoId={match.params.dinoId}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/animals/:animalId"
+            render={({ match }) => (
+              <AnimalDetailsCard
+                animalId={match.params.animalId}
               />
             )}
           />
