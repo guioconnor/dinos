@@ -27,7 +27,7 @@ exports[`<Navigation /> should render correctly 1`] = `
       }
     }
   >
-    Dino Memory game
+    Dino MG
   </NavLink>
   <NavLink
     activeClassName="active"
@@ -38,7 +38,7 @@ exports[`<Navigation /> should render correctly 1`] = `
       }
     }
   >
-    Animals Memory game
+    Animals MG
   </NavLink>
   <NavLink
     activeClassName="active"
@@ -49,7 +49,7 @@ exports[`<Navigation /> should render correctly 1`] = `
       }
     }
   >
-    Birds Memory game
+    Birds MG
   </NavLink>
 </styled.nav>
 `;
