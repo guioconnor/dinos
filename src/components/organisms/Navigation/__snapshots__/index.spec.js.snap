@@ -51,5 +51,16 @@ exports[`<Navigation /> should render correctly 1`] = `
   >
     Birds MG
   </NavLink>
+  <NavLink
+    activeClassName="active"
+    ariaCurrent="true"
+    to={
+      Object {
+        "pathname": "/numbers/counting",
+      }
+    }
+  >
+    Counting
+  </NavLink>
 </styled.nav>
 `;

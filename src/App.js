@@ -17,6 +17,7 @@ import AnimalsGrid from "./containers/AnimalsGridContainer";
 import DinoMemoryGame from "./containers/DinoMemoryGameContainer";
 import AnimalsMemoryGame from "./containers/AnimalsMemoryGameContainer";
 import BirdsMemoryGame from "./containers/BirdsMemoryGameContainer";
+import CountingGame from "./containers/CountingGame";
 
 import DinoDetailsCard from "./containers/DinoDetailsCardContainer";
 import AnimalDetailsCard from "./containers/AnimalDetailsCardContainer";
@@ -90,6 +91,7 @@ const App = () => (
           <Route exact path="/dinos/memory" component={DinoMemoryGame} />
           <Route exact path="/animals/memory" component={AnimalsMemoryGame} />
           <Route exact path="/birds/memory" component={BirdsMemoryGame} />
+          <Route exact path="/numbers/counting" component={CountingGame} />
           <Route
             exact
             path="/dinos/:dinoId"
