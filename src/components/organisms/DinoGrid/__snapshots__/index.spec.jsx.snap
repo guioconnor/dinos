@@ -9,8 +9,8 @@ exports[`<DinoGrid /> With a non-empty data set should render a grid with dino c
   </styled.h1>
   <styled.ul>
     <styled.li>
-      <Styled(DinoLink)>
-        <DinoCard
+      <Styled(Component)>
+        <Component
           dino={
             Object {
               "diet": "carnivorous",
@@ -26,11 +26,11 @@ exports[`<DinoGrid /> With a non-empty data set should render a grid with dino c
           }
           displayDetails={true}
         />
-      </Styled(DinoLink)>
+      </Styled(Component)>
     </styled.li>
     <styled.li>
-      <Styled(DinoLink)>
-        <DinoCard
+      <Styled(Component)>
+        <Component
           dino={
             Object {
               "diet": "herbivorous",
@@ -45,10 +45,10 @@ exports[`<DinoGrid /> With a non-empty data set should render a grid with dino c
           }
           displayDetails={true}
         />
-      </Styled(DinoLink)>
+      </Styled(Component)>
     </styled.li>
   </styled.ul>
-  <Connect(Filter)
+  <Connect(Component)
     filterName="diet"
     filterValues={
       Array [
@@ -71,7 +71,7 @@ exports[`<DinoGrid /> With a non-empty data set should render a grid with dino c
       ]
     }
   />
-  <Connect(Filter)
+  <Connect(Component)
     filterName="period"
     filterValues={
       Array [
@@ -109,7 +109,7 @@ exports[`<DinoGrid /> With an empty data set should render an empty grid 1`] = `
     Dinosaurs
   </styled.h1>
   <styled.ul />
-  <Connect(Filter)
+  <Connect(Component)
     filterName="diet"
     filterValues={
       Array [
@@ -132,7 +132,7 @@ exports[`<DinoGrid /> With an empty data set should render an empty grid 1`] = `
       ]
     }
   />
-  <Connect(Filter)
+  <Connect(Component)
     filterName="period"
     filterValues={
       Array [
