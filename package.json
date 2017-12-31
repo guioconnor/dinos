@@ -1,7 +1,7 @@
 {
   "name": "dino-page",
   "version": "0.1.0",
-  "homepage": "http://github.guioconnor.com/dinos/",
+  "homepage": "http://dinos.guioconnor.com/",
   "private": true,
   "dependencies": {
     "enzyme": "^2.9.1",
@@ -23,7 +23,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "surge build dinos.guioconnor.com",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },

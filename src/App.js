@@ -86,7 +86,7 @@ const App = () => (
       <div>
         <Navigation />
         <Switch>
-          <Route exact path="/dinos" component={DinoGrid} />
+          <Route exact path="/" component={DinoGrid} />
           <Route exact path="/animals" component={AnimalsGrid} />
           <Route exact path="/dinos/memory" component={DinoMemoryGame} />
           <Route exact path="/animals/memory" component={AnimalsMemoryGame} />
