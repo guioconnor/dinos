@@ -24,7 +24,8 @@ const CardWrapper = styled.div`
 `;
 
 const ElementContainer = styled.div`
-  width: 100%;
+  width: 100px;
+  height: 100px;
   padding: 5%;
   display: flex;
   flex-direction: column;

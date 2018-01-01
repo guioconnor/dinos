@@ -6,7 +6,7 @@ exports[`<Navigation /> should render correctly 1`] = `
     activeClassName="active"
     ariaCurrent="true"
     exact={true}
-    to="/dinos"
+    to="/"
   >
     Dinos
   </NavLink>

@@ -29,7 +29,7 @@ const Nav = styled.nav`
 
 const Navigation = () => (
   <Nav>
-    <NavLink exact activeClassName="active" to="/dinos">
+    <NavLink exact activeClassName="active" to="/">
       Dinos
     </NavLink>
     <NavLink exact activeClassName="active" to="/animals">

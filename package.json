@@ -23,7 +23,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "surge build dinos.guioconnor.com",
+    "deploy-dev": "surge build dinos-dev.surge.sh",
+    "deploy-prod": "surge build dinos.surge.sh",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },

@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const Image = styled.img`
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
   filter: brightness(${props => props.silhouette ? 0 : 1})
 `;
 
