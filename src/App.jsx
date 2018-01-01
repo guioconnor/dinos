@@ -7,7 +7,6 @@ import thunk from 'redux-thunk';
 import { Provider } from "react-redux";
 import rootReducer from "./redux";
 
-import animalsData from './data/animalsData';
 import birdsData from './data/birdsData';
 
 import DinoGrid from "./containers/DinoGridContainer";
@@ -61,7 +60,6 @@ const middleware = [
 const store = createStore(
   rootReducer,
   {
-    animals: animalsData,
     birds: birdsData,
     filters: {}
   },

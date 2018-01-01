@@ -1,7 +1,7 @@
 const prefix = 'countingGame';
-export const SET_NUMBER = '${prefix}/SET_NUMBER';
-export const ACTION_ITEM = '${prefix}/ACTION_ITEM';
-export const CHECK_NUMBER = '${prefix}/CHECK_NUMBER';
+export const SET_NUMBER = `${prefix}/SET_NUMBER`;
+export const ACTION_ITEM = `${prefix}/ACTION_ITEM`;
+export const CHECK_NUMBER = `${prefix}/CHECK_NUMBER`;
 
 const initialState = {
   number: null,

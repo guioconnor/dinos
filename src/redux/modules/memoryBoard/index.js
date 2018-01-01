@@ -1,12 +1,15 @@
-import { union, get } from 'lodash';
+import {
+  union,
+  get
+} from 'lodash';
 
 const prefix = 'memoryBoard';
-const RESET_BOARD = '${prefix}/RESET_BOARD';
-const TURN_CARD = '${prefix}/TURN_CARD';
-const MARK_CARDS_FOUND = '${prefix}/MARK_CARDS_FOUND';
-const UNTURN_CARDS = '${prefix}/UNTURN_CARDS';
-const FREEZE_BOARD = '${prefix}/FREEZE_BOARD';
-const UNFREEZE_BOARD = '${prefix}/UNFREEZE_BOARD';
+const RESET_BOARD = `${prefix}/RESET_BOARD`;
+const TURN_CARD = `${prefix}/TURN_CARD`;
+const MARK_CARDS_FOUND = `${prefix}/MARK_CARDS_FOUND`;
+const UNTURN_CARDS = `${prefix}/UNTURN_CARDS`;
+const FREEZE_BOARD = `${prefix}/FREEZE_BOARD`;
+const UNFREEZE_BOARD = `${prefix}/UNFREEZE_BOARD`;
 
 const initialState = {
   boardSize: 16,
@@ -106,7 +109,9 @@ export const turnCard = (cardId) => {
       cardId,
     });
 
-    const { turnedCards } = getState().memoryBoard;
+    const {
+      turnedCards
+    } = getState().memoryBoard;
 
     if (turnedCards.length === 2) {
       dispatch(freezeBoard());
@@ -131,8 +136,7 @@ const memoryBoardReducer = (state = initialState, action) => {
       return {
         ...state,
         turnedCards: union(
-          state.turnedCards,
-          [action.cardId]
+          state.turnedCards, [action.cardId]
         ),
       };
 
@@ -141,8 +145,7 @@ const memoryBoardReducer = (state = initialState, action) => {
         ...state,
         turnedCards: initialState.turnedCards,
         foundCards: union(
-          state.foundCards,
-          [action.card1Id, action.card2Id]
+          state.foundCards, [action.card1Id, action.card2Id]
         ),
       };
 

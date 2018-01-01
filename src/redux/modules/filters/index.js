@@ -1,5 +1,5 @@
 const prefix = 'filters';
-const SET_FILTER = '${prefix}/SET_FILTER';
+const SET_FILTER = `${prefix}/SET_FILTER`;
 
 const initialState = {};
 

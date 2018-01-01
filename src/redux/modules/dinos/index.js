@@ -1,7 +1,7 @@
 const prefix = 'dinos';
 
-const REQUEST_ITEMS = '${prefix}/REQUEST_ITEMS';
-const RECEIVE_ITEMS = '${prefix}/RECEIVE_ITEMS';
+const REQUEST_ITEMS = `${prefix}/REQUEST_ITEMS`;
+const RECEIVE_ITEMS = `${prefix}/RECEIVE_ITEMS`;
 
 const initialState = {
   // isFetching: false,
@@ -40,8 +40,8 @@ const dinosReducer = (state = initialState, action) => {
         // isFetching: true,
       }
     case RECEIVE_ITEMS:
+      debugger;
       return {
-        ...state,
         ...action.items,
         // isFetching: false,
         // receivedAt: action.receivedAt,

@@ -1,5 +1,7 @@
 import { connect } from "react-redux";
 import { getAllAnimalsAlphabeticallySorted } from "../../redux/modules/animals/selectors.js";
+import { fetchItems } from "../../redux/modules/animals";
+
 import DinoGrid from "../../components/organisms/DinoGrid";
 
 const mapStateToProps = state => {
@@ -10,11 +12,13 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  return {};
+  return {
+    loadItems: () => dispatch(fetchItems()),
+  };
 };
 
-const DinoGridContainer = connect(mapStateToProps, mapDispatchToProps)(
+const AnimalGridContainer = connect(mapStateToProps, mapDispatchToProps)(
   DinoGrid
 );
 
-export default DinoGridContainer;
+export default AnimalGridContainer;
