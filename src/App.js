@@ -7,7 +7,6 @@ import thunk from 'redux-thunk';
 import { Provider } from "react-redux";
 import rootReducer from "./redux";
 
-import dinoData from "./data/dinoData.js";
 import animalsData from './data/animalsData';
 import birdsData from './data/birdsData';
 
