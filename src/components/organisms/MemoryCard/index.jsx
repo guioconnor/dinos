@@ -56,12 +56,13 @@ const DinoCard = ({
   displayInitial = false,
   opacity = 1,
   width = null,
+  prefix,
 }) => (
     <CardWrapper width={width} opacity={opacity}>
       {displayDetails && <H2>{dino.name}</H2>}
       {displayImage && !dino.silhouette && (
         <ElementContainer>
-          <DinoImage src={dino.image} alt={dino.name} width={50} height={50} silhouette={dino.silhouette} />
+          <DinoImage name={dino.itemId} prefix={prefix} alt={dino.name} width={50} height={50} silhouette={dino.silhouette} />
         </ElementContainer>
       )}
       {displayInitial && dino.silhouette && (

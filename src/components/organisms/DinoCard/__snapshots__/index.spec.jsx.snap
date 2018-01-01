@@ -9,7 +9,6 @@ exports[`<DinoCard /> should render correctly 1`] = `
     <DinoImage
       alt="Dino name"
       height={50}
-      src="abelisaurus"
       width={50}
     />
   </styled.div>

@@ -44,27 +44,28 @@ const Icons = styled.ul`
 const H2 = styled.h2`margin-top: 20px;`;
 
 const DinoCard = ({
-  dino,
+  item,
   displayDetails,
   displayImage = true,
   opacity = 1,
   width = null,
+  prefix,
 }) => (
     <CardWrapper width={width} opacity={opacity}>
-      {displayDetails && <H2>{dino.name}</H2>}
+      {displayDetails && <H2>{item.name}</H2>}
       {displayImage && (
         <ElementContainer>
-          <DinoImage src={dino.image} alt={dino.name} width={50} height={50} silhouette={dino.silhouette} />
+          <DinoImage name={item.itemId} prefix={prefix} alt={item.name} width={50} height={50} silhouette={item.silhouette} />
         </ElementContainer>
       )}
       {displayDetails && (
         <div>
           <Icons>
-            <DietIcon diet={dino.diet} />
-            <HabitatIcon habitat={dino.habitat} />
+            <DietIcon diet={item.diet} />
+            <HabitatIcon habitat={item.habitat} />
           </Icons>
           <ElementContainer>
-            {dino.mya && <PeriodGraph mya={dino.mya} simple />}
+            {item.mya && <PeriodGraph mya={item.mya} simple />}
           </ElementContainer>
         </div>
       )}

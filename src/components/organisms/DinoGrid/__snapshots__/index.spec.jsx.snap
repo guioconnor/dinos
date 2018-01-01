@@ -11,7 +11,8 @@ exports[`<DinoGrid /> With a non-empty data set should render a grid with dino c
     <styled.li>
       <Styled(DinoLink)>
         <DinoCard
-          dino={
+          displayDetails={true}
+          item={
             Object {
               "diet": "carnivorous",
               "image": "Silhouettes.allosaurus",
@@ -24,14 +25,14 @@ exports[`<DinoGrid /> With a non-empty data set should render a grid with dino c
               "pronunciation": "AL-oh-sore-us",
             }
           }
-          displayDetails={true}
         />
       </Styled(DinoLink)>
     </styled.li>
     <styled.li>
       <Styled(DinoLink)>
         <DinoCard
-          dino={
+          displayDetails={true}
+          item={
             Object {
               "diet": "herbivorous",
               "info": "Named the 'deceptive lizard' because its skull was confused with those of other sauropods until 1909.",
@@ -43,7 +44,6 @@ exports[`<DinoGrid /> With a non-empty data set should render a grid with dino c
               "pronunciation": "ah-PAT-oh-sore-us",
             }
           }
-          displayDetails={true}
         />
       </Styled(DinoLink)>
     </styled.li>

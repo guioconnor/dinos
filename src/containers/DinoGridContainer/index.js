@@ -1,10 +1,15 @@
-import { connect } from "react-redux";
-import { getFilteredDinos } from "../../redux/selectors.js";
+import {
+  connect
+} from "react-redux";
+import {
+  getFilteredDinos
+} from "../../redux/selectors.js";
 import DinoGrid from "../../components/organisms/DinoGrid";
 
 const mapStateToProps = state => {
   return {
     dinoData: getFilteredDinos(state),
+    prefix: 'dinos',
   };
 };
 

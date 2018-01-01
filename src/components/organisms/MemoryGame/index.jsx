@@ -61,6 +61,7 @@ class MemoryGame extends React.Component {
 
   render() {
     const cards = this.props.board;
+    const prefix = this.props.prefix;
     const { turnedCards, foundCards } = this.props;
 
     const onClick = cardId => {
@@ -77,11 +78,11 @@ class MemoryGame extends React.Component {
             return (
               <MemoryButton onClick={() => onClick(cardId)}>
                 {isCardFound(foundCards, cardId) ? (
-                  <DinoCard dino={card} opacity={0.2} />
+                  <DinoCard item={card} prefix={prefix} opacity={0.2} />
                 ) : isCardTurned(turnedCards, cardId) ? (
-                  <DinoCard dino={card} />
+                  <DinoCard item={card} prefix={prefix} />
                 ) : (
-                      <DinoCard dino={card} displayImage={false} />
+                      <DinoCard item={card} prefix={prefix} displayImage={false} />
                     )}
               </MemoryButton>
             );

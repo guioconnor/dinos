@@ -119,7 +119,7 @@ const DinoDetailsCard = ({
       <H1>{name}</H1>
       <CardBody>
         <FeatureImageContainer>
-          <DinoImage className="main" src={image} alt={name} />
+          <DinoImage className="main" name={itemId} alt={name} />
           {mya && <PeriodGraph mya={mya} />}
         </FeatureImageContainer>
         <InfoList>

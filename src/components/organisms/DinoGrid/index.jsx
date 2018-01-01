@@ -50,7 +50,7 @@ const DinoGrid = ({ dinoData, prefix }) => (
       {dinoData.map(dino => (
         <GridItem>
           <StyledDinoLink dinoId={dino.itemId} prefix={prefix}>
-            <DinoCard dino={dino} displayDetails />
+            <DinoCard item={dino} prefix={prefix} displayDetails />
           </StyledDinoLink>
         </GridItem>
       ))}

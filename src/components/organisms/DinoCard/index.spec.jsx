@@ -11,8 +11,8 @@ const data = {
 };
 
 describe("<DinoCard />", () => {
-  describe("default", () => {});
-  const wrapper = shallow(<DinoCard dino={data} />);
+  describe("default", () => { });
+  const wrapper = shallow(<DinoCard item={data} />);
 
   it("should render correctly", () => {
     expect(toJson(wrapper)).toMatchSnapshot();

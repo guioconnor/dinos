@@ -16,5 +16,5 @@ const singleDinoData = {
 
 storiesOf("DinoCard", module).add(
   "default",
-  <DinoCard dino={singleDinoData} />
+  <DinoCard item={singleDinoData} />
 );

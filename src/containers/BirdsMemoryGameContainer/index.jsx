@@ -21,6 +21,7 @@ const mapStateToProps = (state, ownProps) => {
     turnedCards: getTurnedCards(state.memoryBoard),
     foundCards: getFoundCards(state.memoryBoard),
     silhouette: false,
+    prefix: 'birds',
   };
 };
 
