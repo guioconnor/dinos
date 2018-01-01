@@ -1,9 +1,6 @@
-import Silhouettes from "../assets/dinoSilhouettes/index.jsx";
-
 const dinoData = {
   'allosaurus': {
     dinoId: "allosaurus",
-    image: Silhouettes.allosaurus,
     name: "Allosaurus",
     pronunciation: "AL-oh-sore-us",
     meaningOfName: "Other lizard",
@@ -15,8 +12,8 @@ const dinoData = {
     info: "Allosaurus was an apex predator in the Late Jurassic in North America."
   },
   'apatosaurus': {
+    display: false,
     dinoId: "apatosaurus",
-    // "image": apatosaurus,
     name: "Apatosaurus",
     pronunciation: "Ah-PAT-oh-sore-us",
     meaningOfName: "Deceptive lizard",
@@ -28,7 +25,6 @@ const dinoData = {
   },
   'brachiosaurus': {
     dinoId: "brachiosaurus",
-    image: Silhouettes.brachiosaurus,
     name: "Brachiosaurus",
     pronunciation: "BRAK-ee-oh-sore-us",
     meaningOfName: "Arm lizard",
@@ -40,8 +36,8 @@ const dinoData = {
     info: "Brachiosaurus was a large, North American sauropod dinosaur with an arch encircling its nasal opening."
   },
   'compsognathus': {
+    display: false,
     dinoId: "compsognathus",
-    // "image": compsognathus,
     name: "Compsognathus",
     pronunciation: "Komp-sog-NATH-us",
     meaningOfName: "Pretty jaw",
@@ -52,8 +48,8 @@ const dinoData = {
     info: "Compsognathus was small and bipedal, roughly the size of a turkey. It lived in Europe and was the first dinosaur genus to be portrayed with feathers."
   },
   'dracorex': {
+    display: false,
     dinoId: "dracorex",
-    // "image": dracorex,
     name: "Dracorex",
     pronunciation: "Dray-ko-rex",
     meaningOfName: "Dragon king",
@@ -65,7 +61,6 @@ const dinoData = {
   },
   'elasmosaurus': {
     dinoId: "elasmosaurus",
-    image: Silhouettes.elasmosaurus,
     name: "Elasmosaurus",
     pronunciation: "Ee-LAZ-mo-sore-us",
     meaningOfName: "Thin plate lizard",
@@ -78,7 +73,6 @@ const dinoData = {
   },
   'giraffatitan': {
     dinoId: "giraffatitan",
-    image: Silhouettes.giraffatitan,
     name: "Giraffatitan",
     pronunciation: "Ji-raf-e-tie-tan",
     meaningOfName: "Giraffe titan",
@@ -90,8 +84,8 @@ const dinoData = {
     info: "Giraffatitan was a large sauropod related to Brachiosaurus with huge nostrils and nasal openings in its skull."
   },
   'indosuchus': {
+    display: false,
     dinoId: "indosuchus",
-    // "image": indosuchus,
     name: "Indosuchus",
     pronunciation: "In-doh-sook-us",
     meaningOfName: "Indian crocodile",
@@ -102,8 +96,8 @@ const dinoData = {
     info: "Indosuchus had a flattened crest on its skull."
   },
   'jingshanosaurus': {
+    display: false,
     dinoId: "jingshanosaurus",
-    // "image": jingshanosaurus,
     name: "Jingshanosaurus",
     pronunciation: "Jing-shahn-oh-sore-us",
     meaningOfName: "Jingshan lizard",
@@ -114,8 +108,8 @@ const dinoData = {
     info: "Jingshanosaurus was one of the last prosauropods, a long-necked herbivore able to walk on two legs."
   },
   'khaan': {
+    display: false,
     dinoId: "khaan",
-    // "image": khaan,
     name: "Khaan",
     pronunciation: "Kahn",
     meaningOfName: "Ruler",
@@ -126,8 +120,8 @@ const dinoData = {
     info: "Khaan was an oviraptor with a parrot-like beak, discovered in Mongolia."
   },
   'minmi': {
+    display: false,
     dinoId: "minmi",
-    // "image": minmi,
     name: "Minmi",
     pronunciation: "Min-mie",
     meaningOfName: "Minmi Crossing, Queensland, Australia",
@@ -138,8 +132,8 @@ const dinoData = {
     info: "Minmi was a small, anklyosaurian, armored dinosaur discovered in Australia."
   },
   'ouranosaurus': {
+    display: false,
     dinoId: "ouranosaurus",
-    // "image": ouranosaurus,
     name: "Ouranosaurus",
     pronunciation: "Oo-RAH-noh-sore-us",
     meaningOfName: "Brave monitor lizard",
@@ -150,8 +144,9 @@ const dinoData = {
     info: "Ouranosaurus was an iguanodont dinosaur in Africa. It had a large sail on its back supported by long, wide neural spines and an elnogated, flat skull."
   },
   'parasaurolophus': {
+    display: false,
+
     dinoId: "parasaurolophus",
-    // "image": parasaurolophus,
     name: "Parasaurolophus",
     pronunciation: "PARR-eh-saw-ROL-off-us / PARR-eh-sawr-eh-LOH-fus",
     meaningOfName: "Near crested lizard",
@@ -163,7 +158,6 @@ const dinoData = {
   },
   'spinosaurus': {
     dinoId: "spinosaurus",
-    image: Silhouettes.spinosaurus,
     name: "Spinosaurus",
     pronunciation: "SPINE-oh-SORE-us",
     meaningOfName: "Spine lizard",
@@ -175,8 +169,8 @@ const dinoData = {
     info: "Spinosaurus was one of the largest carnivore dinosaurs to walk the Earth. Its diet consisted mostly of fish and the large spines on its back likely formed a sail."
   },
   'tyrannosaurus': {
+    display: false,
     dinoId: "tyrannosaurus",
-    image: Silhouettes.tyrannosaurusRex,
     name: "Tyrannosaurus",
     pronunciation: "Tie-RAN-oh-sore-us",
     meaningOfName: "Tyrant lizard",
@@ -189,8 +183,8 @@ const dinoData = {
     info: "Tyrannosaurus is well-represented in both fiction and history with over 50 specimens discovered. It and was one of the last non-avian dinosaurs to exist before the extinction event. Tyrannosaurus had a massive skull and a long heavy tail."
   },
   'utahraptor': {
+    display: false,
     dinoId: "utahraptor",
-    // "image": utahraptor,
     name: "Utahraptor",
     pronunciation: "YOO-tah-RAP-tor",
     meaningOfName: "Utah predator",
@@ -201,8 +195,8 @@ const dinoData = {
     info: "Found in the USA, Utahraptor resembled velociraptor but much larger, prompting Robert T. Bakker to pronounce it 'Spielberg's raptor' due to the velociraptors in the movie <em>Jurassic Park</em> being portrayed much larger than their historical counterparts."
   },
   'vulcanodon': {
+    display: false,
     dinoId: "vulcanodon",
-    // "image": vulcanodon,
     name: "Vulcanodon",
     pronunciation: "Vul-ka-oh-don",
     meaningOfName: "Vulcano tooth",
@@ -213,8 +207,8 @@ const dinoData = {
     info: "Vulcanodon was a primitive sauropod that lived in southern Africa."
   },
   'xenoceratops': {
+    display: false,
     dinoId: "xenoceratops",
-    // "image": xenoceratops,
     name: "Xenoceratops",
     pronunciation: "ZEE-no-SEH-ruh-tops",
     meaningOfName: "Alien horned face",
@@ -225,8 +219,8 @@ const dinoData = {
     info: "Xenoceratops had horns and a bony frill with elborate ornamentation of projections, knobs, and spikes."
   },
   'zephyrosaurus': {
+    display: false,
     dinoId: "zephyrosaurus",
-    // "image": zephyrosaurus,
     name: "Zephyrosaurus",
     pronunciation: "ZEF-ear-ro-SORE-us",
     meaningOfName: "West wind lizard",
@@ -238,14 +232,12 @@ const dinoData = {
   },
   'abelisaurus': {
     dinoId: "abelisaurus",
-    image: Silhouettes.abelisaurus,
     name: "Abelisaurus",
     habitat: "Land",
     diet: "Carnivore"
   },
   'camarosaurus': {
     dinoId: "camarosaurus",
-    image: Silhouettes.camarosaurus,
     name: "Camarosaurus",
     legCount: 4,
     habitat: "Land",
@@ -253,41 +245,35 @@ const dinoData = {
   },
   'claosaurus': {
     dinoId: "claosaurus",
-    image: Silhouettes.claosaurus,
     name: "Claosaurus",
     habitat: "Land",
     diet: "Herbivore"
   },
   'eromangasaurus': {
     dinoId: "eromangasaurus",
-    image: Silhouettes.eromangasaurus,
     name: "Eromangasaurus",
     habitat: "Sea"
   },
   'mamenchisaurus': {
     dinoId: "mamenchisaurus",
-    image: Silhouettes.mamenchisaurus,
     name: "Mamenchisaurus",
     habitat: "Land",
     diet: "Herbivore"
   },
   'aerosteon': {
     dinoId: "aerosteon",
-    image: Silhouettes.aerosteon,
     name: "Aerosteon",
     habitat: "Land",
     diet: "Carnivore"
   },
   'camptosaurus': {
     dinoId: "camptosaurus",
-    image: Silhouettes.camptosaurus,
     name: "Camptosaurus",
     habitat: "Land",
     diet: "Herbivore"
   },
   'daspletosaurus': {
     dinoId: "daspletosaurus",
-    image: Silhouettes.daspletosaurus,
     name: "Daspletosaurus",
     habitat: "Land",
     mya: [77, 74],
@@ -295,202 +281,173 @@ const dinoData = {
   },
   'gigantoraptor': {
     dinoId: "gigantoraptor",
-    image: Silhouettes.gigantoraptor,
     name: "Gigantoraptor",
     habitat: "Land",
     diet: "Carnivore"
   },
   'mapusaurus': {
     dinoId: "mapusaurus",
-    image: Silhouettes.mapusaurus,
     name: "Mapusaurus",
     habitat: "Land",
     diet: "Carnivore"
   },
   'albertosaurus': {
     dinoId: "albertosaurus",
-    image: Silhouettes.albertosaurus,
     name: "Albertosaurus",
     habitat: "Land",
     diet: "Carnivore"
   },
   'carcharodontosaurus': {
     dinoId: "carcharodontosaurus",
-    image: Silhouettes.carcharodontosaurus,
     name: "Carcharodontosaurus",
     habitat: "Land",
     diet: "Carnivore"
   },
   'deinonychus': {
     dinoId: "deinonychus",
-    image: Silhouettes.deinonychus,
     name: "Deinonychus",
     habitat: "Land",
     diet: "Carnivore"
   },
   'massospondylus': {
     dinoId: "massospondylus",
-    image: Silhouettes.massospondylus,
     name: "Massospondylus",
     habitat: "Land",
     diet: "Herbivore"
   },
   'caudipteryx': {
     dinoId: "caudipteryx",
-    image: Silhouettes.caudipteryx,
     name: "Caudipteryx",
     habitat: "Land",
     diet: "Carnivore"
   },
   'dilong': {
     dinoId: "dilong",
-    image: Silhouettes.dilong,
     name: "Dilong",
     habitat: "Land",
     diet: "Carnivore"
   },
   'iguanodon': {
     dinoId: "iguanodon",
-    image: Silhouettes.iguanodon,
     name: "Iguanodon",
     habitat: "Land",
     diet: "Herbivore"
   },
   'megalosaurus': {
     dinoId: "megalosaurus",
-    image: Silhouettes.megalosaurus,
     name: "Megalosaurus",
     habitat: "Land",
     diet: "Carnivore"
   },
   'velociraptor': {
     dinoId: "velociraptor",
-    image: Silhouettes.velociraptor,
     name: "Velociraptor",
     habitat: "Land",
     diet: "Carnivore"
   },
   'archaeopteryx': {
     dinoId: "archaeopteryx",
-    image: Silhouettes.archaeopteryx,
     name: "Archaeopteryx",
     habitat: "Land",
     diet: "Carnivore"
   },
   'centrosaurus': {
     dinoId: "centrosaurus",
-    image: Silhouettes.centrosaurus,
     name: "Centrosaurus",
     habitat: "Land",
     diet: "Herbivore"
   },
   'diplodocus': {
     dinoId: "diplodocus",
-    image: Silhouettes.diplodocus,
     name: "Diplodocus",
     habitat: "Land",
     diet: "Carnivore"
   },
   'irritator': {
     dinoId: "irritator",
-    image: Silhouettes.irritator,
     name: "Irritator",
     habitat: "Land",
     diet: "Carnivore"
   },
   'microraptor': {
     dinoId: "microraptor",
-    image: Silhouettes.microraptor,
     name: "Microraptor",
     habitat: "Sky",
     diet: "Carnivore"
   },
   'argentinosaurus': {
     dinoId: "argentinosaurus",
-    image: Silhouettes.argentinosaurus,
     name: "Argentinosaurus",
     habitat: "Land",
     diet: "Herbivore"
   },
   'cetiosaurus': {
     dinoId: "cetiosaurus",
-    image: Silhouettes.cetiosaurus,
     name: "Cetiosaurus",
     habitat: "Land",
     diet: "Herbivore"
   },
   'edmontosaurus': {
     dinoId: "edmontosaurus",
-    image: Silhouettes.edmontosaurus,
     name: "Edmontosaurus",
     habitat: "Land",
     diet: "Herbivore"
   },
   'leyesaurus': {
     dinoId: "leyesaurus",
-    image: Silhouettes.leyesaurus,
     name: "Leyesaurus",
     habitat: "Land"
   },
   'monoclonius': {
     dinoId: "monoclonius",
-    image: Silhouettes.monoclonius,
     name: "Monoclonius",
     habitat: "Land",
     diet: "Herbivore"
   },
   'baryonyx': {
     dinoId: "baryonyx",
-    image: Silhouettes.baryonyx,
     name: "Baryonyx",
     habitat: "Land",
     diet: "Carnivore"
   },
   'chasmosaurus': {
     dinoId: "chasmosaurus",
-    image: Silhouettes.chasmosaurus,
     name: "Chasmosaurus",
     habitat: "Land",
     diet: "Herbivore"
   },
   'magyarosaurus': {
     dinoId: "magyarosaurus",
-    image: Silhouettes.magyarosaurus,
     name: "Magyarosaurus",
     habitat: "Land",
     diet: "Herbivore"
   },
   'plateosaurus': {
     dinoId: "plateosaurus",
-    image: Silhouettes.plateosaurus,
     name: "Plateosaurus",
     habitat: "Land",
     diet: "Herbivore"
   },
   'citipati': {
     dinoId: "citipati",
-    image: Silhouettes.citipati,
     name: "Citipati",
     habitat: "Land",
     diet: "Omnivore"
   },
   'epidexipteryx': {
     dinoId: "epidexipteryx",
-    image: Silhouettes.epidexipteryx,
     name: "Epidexipteryx",
     habitat: "Land",
     diet: "Carnivore"
   },
   'majungasaurus': {
     dinoId: "majungasaurus",
-    image: Silhouettes.majungasaurus,
     name: "Majungasaurus",
     habitat: "Land",
     diet: "Carnivore"
   },
   'pterodactyl': {
     dinoId: "pterodactyl",
-    image: Silhouettes.pterodactyl,
     name: "Pterodactyl",
     habitat: "Sky",
     diet: "Carnivore"

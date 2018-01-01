@@ -1,5 +1,8 @@
-import { birdImageMiddleware } from '../../../assets/birdImage';
-import { shuffle, take, orderBy } from 'lodash';
+import {
+  shuffle,
+  take,
+  orderBy
+} from 'lodash';
 
 export const getAllBirds = (state) => {
   return Object.keys(state)
@@ -9,8 +12,7 @@ export const getAllBirds = (state) => {
         ...bird,
         itemId: bird.birdId,
       }
-    })
-    .map(birdImageMiddleware);
+    });
 };
 
 export const getAllBirdsAlphabeticallySorted = birds =>
@@ -25,5 +27,4 @@ export const getBirdById = (state, birdId) => {
   if (!state[birdId]) {
     return;
   }
-  return birdImageMiddleware(state[birdId]);
 };

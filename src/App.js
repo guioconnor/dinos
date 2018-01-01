@@ -63,7 +63,7 @@ const store = createStore(
   rootReducer,
   {
     dinos: Object.keys(dinoData)
-      .filter(dinoId => !!dinoData[dinoId].image)
+      .filter(dinoId => dinoData[dinoId].display !== false)
       .map(dinoId => dinoData[dinoId])
       .reduce((dinoData, dino) => {
         return {

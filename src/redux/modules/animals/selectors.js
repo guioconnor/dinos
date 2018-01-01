@@ -1,5 +1,8 @@
-import { animalImageMiddleware } from '../../../assets/animalImage';
-import { shuffle, take, orderBy } from 'lodash';
+import {
+  shuffle,
+  take,
+  orderBy
+} from 'lodash';
 
 export const getAllAnimals = (state) => {
   return Object.keys(state)
@@ -9,8 +12,7 @@ export const getAllAnimals = (state) => {
         ...animal,
         itemId: animal.animalId,
       }
-    })
-    .map(animalImageMiddleware);
+    });
 };
 
 export const getAllAnimalsAlphabeticallySorted = animals =>
@@ -29,5 +31,4 @@ export const getAnimalById = state => animalId => {
   if (!state[animalId]) {
     return;
   }
-  return animalImageMiddleware(state[animalId]);
 };
