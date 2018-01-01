@@ -62,15 +62,6 @@ const middleware = [
 const store = createStore(
   rootReducer,
   {
-    dinos: Object.keys(dinoData)
-      .filter(dinoId => dinoData[dinoId].display !== false)
-      .map(dinoId => dinoData[dinoId])
-      .reduce((dinoData, dino) => {
-        return {
-          ...dinoData,
-          [dino.dinoId]: dino,
-        }
-      }, {}),
     animals: animalsData,
     birds: birdsData,
     filters: {}

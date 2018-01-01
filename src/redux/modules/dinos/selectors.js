@@ -1,15 +1,19 @@
-import { shuffle, take, orderBy } from 'lodash';
+import {
+  shuffle,
+  take,
+  orderBy
+} from 'lodash';
 
 const getAllDinos = dinos =>
   Object.keys(dinos)
-    .map(dinoId => dinos[dinoId])
-    .map(dino => {
-      return {
-        ...dino,
-        itemId: dino.dinoId,
-      }
-    })
-  ;
+  .filter(dinoId => dinos[dinoId].display !== false)
+  .map(dinoId => dinos[dinoId])
+  .map(dino => {
+    return {
+      ...dino,
+      itemId: dino.dinoId,
+    }
+  });
 
 const getAllDinosAlphabeticallySorted = dinos =>
   orderBy(getAllDinos(dinos), [dino => dino.name.toLowerCase()], ['asc']);
@@ -21,4 +25,8 @@ const getRandomDinos = dinos => count => {
 
 const getDinoById = dinos => dinoId => dinos[dinoId];
 
-export { getAllDinosAlphabeticallySorted, getRandomDinos, getDinoById };
+export {
+  getAllDinosAlphabeticallySorted,
+  getRandomDinos,
+  getDinoById
+};

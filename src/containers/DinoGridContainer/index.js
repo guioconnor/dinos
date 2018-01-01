@@ -4,6 +4,9 @@ import {
 import {
   getFilteredDinos
 } from "../../redux/selectors.js";
+import {
+  fetchItems
+} from "../../redux/modules/dinos";
 import DinoGrid from "../../components/organisms/DinoGrid";
 
 const mapStateToProps = state => {
@@ -14,7 +17,9 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  return {};
+  return {
+    loadItems: () => dispatch(fetchItems()),
+  };
 };
 
 const DinoGridContainer = connect(mapStateToProps, mapDispatchToProps)(

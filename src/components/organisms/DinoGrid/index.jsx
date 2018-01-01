@@ -43,21 +43,33 @@ const StyledDinoLink = styled(DinoLink) `
 
 const H1 = styled.h1`font-size: 50px;`;
 
-const DinoGrid = ({ dinoData, prefix }) => (
-  <div className="App">
-    <H1>Dinosaurs</H1>
-    <Container>
-      {dinoData.map(dino => (
-        <GridItem>
-          <StyledDinoLink dinoId={dino.itemId} prefix={prefix}>
-            <DinoCard item={dino} prefix={prefix} displayDetails />
-          </StyledDinoLink>
-        </GridItem>
-      ))}
-    </Container>
-    <Filter filterName="diet" filterValues={dietFilterValues} />
-    <Filter filterName="period" filterValues={periodFilterValues} />
-  </div>
-);
+class DinoGrid extends React.Component {
+  componentWillMount() {
+    const { loadItems } = this.props;
+    if (loadItems) {
+      loadItems();
+    }
+  }
+
+  render() {
+    const { dinoData, prefix } = this.props;
+    return (
+      <div className="App">
+        <H1>Dinosaurs</H1>
+        <Container>
+          {dinoData.map(dino => (
+            <GridItem>
+              <StyledDinoLink dinoId={dino.itemId} prefix={prefix}>
+                <DinoCard item={dino} prefix={prefix} displayDetails />
+              </StyledDinoLink>
+            </GridItem>
+          ))}
+        </Container>
+        <Filter filterName="diet" filterValues={dietFilterValues} />
+        <Filter filterName="period" filterValues={periodFilterValues} />
+      </div>
+    );
+  }
+}
 
 export default DinoGrid;
