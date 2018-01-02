@@ -4,7 +4,8 @@ const REQUEST_ITEMS = `${prefix}/REQUEST_ITEMS`;
 const RECEIVE_ITEMS = `${prefix}/RECEIVE_ITEMS`;
 
 const initialState = {
-  // isFetching: false,
+  isFetching: false,
+  items: {},
 };
 
 // actions
@@ -37,14 +38,13 @@ const dinosReducer = (state = initialState, action) => {
     case REQUEST_ITEMS:
       return {
         ...state,
-        // isFetching: true,
+        isFetching: true,
       }
     case RECEIVE_ITEMS:
-      debugger;
       return {
-        ...action.items,
-        // isFetching: false,
-        // receivedAt: action.receivedAt,
+        items: action.items,
+        isFetching: false,
+        receivedAt: action.receivedAt,
       }
     default:
       return state;

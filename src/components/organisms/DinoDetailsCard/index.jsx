@@ -112,14 +112,15 @@ const DinoDetailsCard = ({
   length,
   period,
   mya,
-  info
-  }
+  info,
+  },
+  prefix,
 }) => (
     <div className="App">
       <H1>{name}</H1>
       <CardBody>
         <FeatureImageContainer>
-          <DinoImage className="main" name={itemId} alt={name} />
+          <DinoImage className="main" prefix={prefix} name={itemId} alt={name} />
           {mya && <PeriodGraph mya={mya} />}
         </FeatureImageContainer>
         <InfoList>

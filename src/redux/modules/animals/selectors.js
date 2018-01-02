@@ -5,8 +5,8 @@ import {
 } from 'lodash';
 
 export const getAllAnimals = (state) => {
-  return Object.keys(state)
-    .map(animalId => state[animalId])
+  return Object.keys(state.items)
+    .map(animalId => state.items[animalId])
     .map(animal => {
       return {
         ...animal,
@@ -23,12 +23,14 @@ export const getRandomAnimals = animal => count => {
   return take(randomAnimals, count);
 };
 
-export const getAnimalByDifficultyLevel = (state, level) => {
-  return getAllAnimals.filter(animalId => (state[animalId].difficulty === level));
-}
-
 export const getAnimalById = state => animalId => {
-  if (!state[animalId]) {
+  const animal = state.items[animalId];
+  if (!animal) {
     return;
   }
+
+  return {
+    ...animal,
+    itemId: animal.animalId,
+  };
 };

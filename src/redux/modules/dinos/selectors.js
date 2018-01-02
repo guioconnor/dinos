@@ -5,9 +5,9 @@ import {
 } from 'lodash';
 
 const getAllDinos = dinos =>
-  Object.keys(dinos)
-  .filter(dinoId => dinos[dinoId].display !== false)
-  .map(dinoId => dinos[dinoId])
+  Object.keys(dinos.items)
+  .filter(dinoId => dinos.items[dinoId].display !== false)
+  .map(dinoId => dinos.items[dinoId])
   .map(dino => {
     return {
       ...dino,
@@ -23,10 +23,24 @@ const getRandomDinos = dinos => count => {
   return take(randomDinos, count);
 };
 
-const getDinoById = dinos => dinoId => dinos[dinoId];
+const getDinoById = state => dinoId => {
+  const dino = state.items[dinoId];
+  if (!dino) {
+    return;
+  }
+
+  return {
+    ...dino,
+    foo: "bar",
+    itemId: dino.dinoId,
+  }
+};
+
+const isFetching = dinos => dinos.isFetching;
 
 export {
   getAllDinosAlphabeticallySorted,
   getRandomDinos,
-  getDinoById
+  getDinoById,
+  isFetching,
 };

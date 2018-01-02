@@ -4,7 +4,8 @@ import { getAnimalById } from "../../redux/modules/animals/selectors";
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    dino: getAnimalById(state.animals)(ownProps.animalId)
+    dino: getAnimalById(state.animals)(ownProps.animalId),
+    prefix: 'animals',
   }
 }
 
